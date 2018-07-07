@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/order_detail_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_ll"
+        android:layout_below="@+id/order_detail_tb"
+        android:layout_marginBottom="@dimen/_1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_state_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单配送中"
+                        android:textSize="@dimen/_20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/divider_line" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:padding="10dp">
+
+
+                        <com.neocom.mobilerefueling.view.CircleImageAvtar
+                            android:id="@+id/order_detail_avtar_cv"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/ic_success" />
+
+                        <TextView
+                            android:id="@+id/order_detail_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/order_detail_avtar_cv"
+                            android:text="张三" />
+
+                        <ImageView
+                            android:id="@+id/order_detail_phone_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/order_phone" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="订单123"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:text="订单处理信息"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/divider_line" />
+
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_time_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_address_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_phone_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:layout_width="match_parent"
+                        android:id="@+id/order_expact_time_oc"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_pay_type_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_check_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_note_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车辆信息"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/divider_line" />
+
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_carnum_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_oil_type_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_oil_mount_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_user_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/order_driver_phone_oc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+
+        <Button
+            android:id="@+id/pay_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#B1B1B1"
+            android:text="取消支付" />
+
+        <Button
+            android:id="@+id/pay_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size"
+            android:text="立即支付" />
+    </LinearLayout>
+
+</RelativeLayout>

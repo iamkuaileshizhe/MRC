@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/car_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/car_driver_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/car_driver_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/car_safe_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/car_safe_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/divider" />
+</LinearLayout>

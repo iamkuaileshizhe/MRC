@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_line"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.utils.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@mipmap/city_edit"
+        android:drawableLeft="@drawable/shape_rectangle_white"
+        android:gravity="center"
+        android:hint="请输入客户简称"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColor="@color/color_text_black"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/normal_font_size" />
+
+    <com.neocom.mobilerefueling.view.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.neocom.mobilerefueling.view.XListView
+            android:id="@+id/receive_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/divider_line"
+            android:dividerHeight="3dp" />
+
+
+    </com.neocom.mobilerefueling.view.LoadingLayout>
+
+
+</LinearLayout>

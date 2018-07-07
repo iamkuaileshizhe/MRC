@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/pici_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/_20sp" />
+
+        <TextView
+            android:id="@+id/pici_id_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="查看详情 >"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/_20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oil_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oil_get_oil_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oil_getter"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oil_getter_phone"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oil_get_time"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

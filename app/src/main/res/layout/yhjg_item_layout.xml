@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:padding="@dimen/_2dp"
+    card_view:cardCornerRadius="4dp">
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_view"-->
+    <!--android:padding="20dp"-->
+    <!--android:text="123123"-->
+    <!--android:textSize="@dimen/normal_font_size"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+
+    <LinearLayout
+        android:id="@+id/lv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/oil_type"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/small_font_size" />
+            <!--android:text="国五-35号柴油"-->
+
+            <TextView
+                android:id="@+id/oil_guobiao"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/small_font_size" />
+
+            <TextView
+                android:id="@+id/oil_price_tv"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                android:padding="@dimen/_5dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/small_font_size" />
+
+            <!--android:hint="请输入金额"-->
+            <!--android:background="@drawable/et_bg"-->
+
+            <TextView
+                android:id="@+id/oil_count_et"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/small_font_size" />
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_delete"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_margin="@dimen/_2dp"-->
+        <!--android:src="@mipmap/delete_address"-->
+        <!--android:visibility="gone" />-->
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:hint="设置主机"
+            android:text=""
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <com.neocom.mobilerefueling.view.IPEditText
+            android:id="@+id/setting_webservice_ipe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:hint="设置端口"
+            android:text=""
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <EditText
+            android:id="@+id/setting_webservice_port_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_item_height"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/record_list_file_bg"
+            android:clickable="true"
+            android:hint="请输入端口号"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ip_setting_ok"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        android:layout_margin="@dimen/_5dp"
+        android:background="@drawable/agree_btn_select"
+        android:text="确定"
+        android:textSize="@dimen/normal_font_size" />
+
+
+    <Button
+        android:id="@+id/ip_setting_default"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        android:layout_margin="@dimen/_5dp"
+        android:background="@drawable/agree_btn_select"
+        android:text="恢复默认"
+        android:textSize="@dimen/normal_font_size" />
+
+</LinearLayout>

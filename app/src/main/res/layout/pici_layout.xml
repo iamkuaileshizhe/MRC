@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/top_bar_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:textColor="@color/color_text_black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/top_bar_ok_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textColor="@color/colorBarText"
+                android:textSize="17sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--<com.neocom.mobilerefueling.view.XListView-->
+    <!--android:id="@+id/pici_listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:dividerHeight="@dimen/_5dp"-->
+    <!--android:divider="@color/divider_line"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/hetong_fragment"
+            android:name="com.neocom.mobilerefueling.fragment.PiCiListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/submit_now" />
+
+        <Button
+            android:id="@+id/submit_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_btn_zxjgxg_selected"
+            android:text="新增油品批次"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/bottom_ll_sub_oil"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingBottom="5dp">-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/submit_cancle"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#B1B1B1"-->
+    <!--android:text="到场确认"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/submit_now"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_btn_login_selected"-->
+    <!--android:text="确定交接班"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/normal_font_size" />-->
+    <!--</LinearLayout>-->
+    <!---->
+
+
+</LinearLayout>

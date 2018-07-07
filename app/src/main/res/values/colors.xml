@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#192740</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- 蓝色 -->
+    <!-- 选中文字颜色 -->
+    <!-- 未选中文字颜色 -->
+
+    <color name="fg_bg_light_white">#F6F6F6</color>
+    <color name="divider_line">#50C8C7CC</color>
+    <color name="text_color">#080103</color>
+
+    <color name="blue">#419DE4</color>
+    <color name="colorBarText">#F0F5E5</color>
+    <color name="tans">#00000000</color>
+
+    <!-- 描边颜色 -->
+    <color name="border_clo">#ccc</color>
+    <color name="white">#fff</color>
+
+    <color name="listview_divider">#50C8C7CC</color>
+    <color name="order_divider">#50C8C7CC</color>
+
+
+    <!--手势锁-->
+
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="red_f4333c">#F4333C</color>
+
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="gray">#cccccc</color>
+
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+
+
+    <!--登录 相关颜色-->
+    <color name="color_999999">#999999</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_b0b8b2">#b0b8b2</color>
+
+    <color name="top_bar_color">#ffffff</color>
+    <color name="order_ok_btn">#d81e06</color>
+    <color name="order_no_btn">#B1B1B1</color>
+
+
+    <!--订单提交成功界面-->
+
+    <color name="color_50be06">#50be06</color>
+
+
+    <!--登录界面-->
+    <color name="col_login_bg">#192740</color>
+    <color name="col_login_btn_normal">#0084FF</color>
+    <color name="col_login_btn_pressed">#0681F4</color>
+
+    <!--主界面-->
+    <color name="mian_tab_col_select">#42b2c7</color>
+    <color name="mian_tab_col_normal">#9d9e9e</color>
+    <color name="mian_tab_font_color">#767676</color>
+    <!--充值界面-->
+    <color name="remain_money_title">#494949</color>
+    <color name="remain_money_num">#db2042</color>
+
+    <!--indicator 颜色-->
+    <color name="indicator_color">#00aecb</color>
+
+    <!--订单 文字颜色-->
+    <color name="order_font_color">#999999</color>
+    <color name="gray_white">#F2F2F2</color>
+    <color name="beangreen">#C7EDCC</color>
+    <!--忘记密码-->
+    <color name="divider">#50C8C7CC</color>
+
+    <!--个人中心-->
+    <color name="me_top_bg">#326EE6</color>
+    <color name="me_top_bg_bottom">#0084FF</color>
+
+    <color name="charge_money_border_bg">#3da1ff</color>
+
+
+    <!--派送单状态颜色-->
+
+    <color name="top_bar_bg">#FFFFFF</color>
+    <color name="top_bar_font_color">#000000</color>
+
+    <color name="listview_driver">#eeeeee</color>
+    <color name="bg">#4d4d4d</color>
+
+    <color name="layout_line_bg">#AAAAAA</color>
+
+    <color name="light_blue">#3da1ff</color>
+    <color name="color_pic">#3F83F8</color>
+
+    <color name="decline_orange">#FF9D34</color>
+    <color name="decline_grey_orange">#F3932C</color>
+
+    <color name="light_grey">#E7E3E3</color>
+    <color name="record_btn">#298C3D</color>
+
+    <color name="huibai">#F7F7F7</color>
+
+    <color name="qianlan">#BDEFF5</color>
+</resources>

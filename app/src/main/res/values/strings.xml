@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">哥们加油(企业端)</string>
+
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+
+    <string name="storage_description_title">你能允许存储权限吗?</string>
+    <string name="storage_description_why_we_need_the_permission">你好,地图缓存需要存储权限。你能允许吗?</string>
+    <string name="location_description_title">你能允许定位权限吗?</string>
+    <string name="location_description_why_we_need_the_permission">你好,定位功能需要获取位置权限。你能允许吗?</string>
+
+    <string-array name="tab_names">
+        <item>未提交</item>
+        <item>审核中</item>
+        <item>派送中</item>
+        <item>已完成</item>
+        <item>已评价</item>
+        <item>已撤销</item>
+        <item>审核未通过</item>
+        <item>全部</item>
+    </string-array>
+
+    <string-array name="driver_list_names">
+        <item>全部</item>
+        <item>待接单</item>
+        <item>已接单</item>
+        <item>已完成</item>
+        <item>已拒绝</item>
+    </string-array>
+
+    <string-array name="order_list_names">
+        <item>全部</item>
+        <item>未确认</item>
+        <item>确认未通过</item>
+        <item>确认已通过</item>
+    </string-array>
+
+    <string-array name="change_list_names">
+        <item>待接班</item>
+        <item>已接班</item>
+        <item>交班</item>
+    </string-array>
+
+
+    <string-array name="potential_kehu">
+        <item>全部</item>
+        <item>未提交</item>
+        <item>待审核</item>
+        <item>审核失败</item>
+        <item>审核通过</item>
+    </string-array>
+
+
+    <!-- Gesture login activity -->
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+
+    <!-- Create gesture activity -->
+    <string name="create_gesture_default">绘制解锁图案</string>
+    <string name="create_gesture_correct">再次绘制解锁图案</string>
+    <string name="create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
+
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_success">刷新成功</string>
+    <string name="xlistview_header_hint_failt">刷新失败</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+
+
+    <!--登录 相关 字符-->
+    <string name="hint_login_username">请输入账号</string>
+    <string name="hint_login_password">输入密码</string>
+    <string name="login">登录</string>
+    <string name="reg_now">立即注册</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="please_input_limit_pwd">请输入数字或字母</string>
+
+
+    <string name="cancel">取消升级</string>
+    <string name="sure">立刻升级</string>
+
+    <!--高德地图-->
+    <string name="battery_saving">低功耗模式</string>
+    <string name="device_sensors">仅设备模式</string>
+    <string name="hight_accuracy">高精度模式</string>
+    <string name="interval">定位周期(ms)</string>
+    <string name="httpTimeout">网络超时(ms)</string>
+    <string name="location_once">单次定位</string>
+    <string name="needAddress">逆地理编码</string>
+    <string name="cacheAble">开启缓存</string>
+    <string name="onceLastest">提高首次定位精度</string>
+    <string name="gpsFirst">GPS优先</string>
+    <string name="useSensor">使用传感器</string>
+    <string name="defaultInteval">2000</string>
+    <string name="defaultHttpTimeout">30000</string>
+    <string name="title_location">获取定位数据</string>
+    <string name="startLocation">开始定位</string>
+    <string name="stopLocation">停止定位</string>
+
+    <string name="str_write_text">写NFC标签中的文本数据</string>
+
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="setting_su">设置成功</string>
+    <string name="text_tts_source">科大讯飞作为中国最大的智能语音技术提供商，在智能语音技术领域有着长期的研究积累，并在中文语音合成、语音识别、口语评测等多项技术上拥有国际领先的成果。科大讯飞是我国唯一以语音技术为产业化方向的“国家863计划成果产业化基地”…</string>
+
+    <!-- 请替换成在语音云官网申请的appid -->
+    <string name="app_id">5a161fcf</string>
+    <string-array name="voicer_cloud_entries">
+        <item>小燕—女青、中英、普通话</item>
+        <item>小宇—男青、中英、普通话</item>
+        <item>凯瑟琳—女青、英</item>
+        <item>亨利—男青、英</item>
+        <item>玛丽—女青、英</item>
+        <item>小研—女青、中英、普通话</item>
+        <item>小琪—女青、中英、普通话</item>
+        <item>小峰—男青、中英、普通话</item>
+        <item>小梅—女青、中英、粤语</item>
+        <item>小莉—女青、中英、台湾普通话</item>
+        <item>小蓉—女青、中、四川话</item>
+        <item>小芸—女青、中、东北话</item>
+        <item>小坤—男青、中、河南话</item>
+        <item>小强—男青、中、湖南话</item>
+        <item>小莹—女青、中、陕西话</item>
+        <item>小新—男童、中、普通话</item>
+        <item>楠楠—女童、中、普通话</item>
+        <item>老孙—男老、中、普通话</item>
+    </string-array>
+
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+
+    <string name="text_tts_source_en">iFLYTEK is a national key software enterprise dedicated to the research of intelligent speech and language technologies, development of software and chip products, provision of speech information services, and integration of E-government systems. The intelligent speech technology of iFLYTEK, the core technology of the company, represents the top level in the world.</string>
+    <string name="tts_toast_format" formatted="false">缓冲进度为%d%%，播放进度为%d%%</string>
+
+    <string name="title_dialog">提示</string>
+    <string name="message_permission_failed">软件运行需要一些权限,请允许，否则该软件可能不能正常运行</string>
+    <string name="ok">允许</string>
+    <string name="no">拒绝</string>
+
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="point">.</string>
+</resources>

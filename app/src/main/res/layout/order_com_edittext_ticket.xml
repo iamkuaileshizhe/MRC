@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_5dp">
+
+    <TextView
+        android:id="@+id/com_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text=" "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20sp" />
+
+    <EditText
+        android:id="@+id/com_edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/danwei"
+        android:layout_toRightOf="@+id/com_edit_title"
+        android:background="@drawable/et_bg"
+        android:gravity="right"
+        android:padding="@dimen/_1dp"
+        android:paddingLeft="@dimen/_5dp"
+        android:text=" "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20sp" />
+
+    <TextView
+        android:id="@+id/danwei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20sp" />
+
+</RelativeLayout>

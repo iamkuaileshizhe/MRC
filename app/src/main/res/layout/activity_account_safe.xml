@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/account_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:middleTitle="账号安全" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/divider" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/account_change_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        android:layout_marginBottom="2dp"
+        app:sLeftTextString="登录密码修改"
+        app:sRightIconHeight="15dp"
+        app:sRightIconRes="@drawable/arrow_right"
+        app:sRightIconWidth="15dp" />
+
+
+    <com.allen.library.SuperTextView
+
+        android:id="@+id/account_change_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        android:layout_marginBottom="2dp"
+        android:visibility="gone"
+        app:sLeftTextString="手机号变更"
+        app:sRightIconHeight="15dp"
+        app:sRightIconRes="@drawable/arrow_right"
+        app:sRightIconWidth="15dp" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/account_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        android:layout_marginBottom="2dp"
+        app:sLeftTextString="个人信息"
+        app:sRightIconHeight="15dp"
+        app:sRightIconRes="@drawable/arrow_right"
+        app:sRightIconWidth="15dp" />
+
+
+</LinearLayout>

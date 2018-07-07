@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--"tankSize" : "123",-->
+    <!--"pName" : "汤唯",-->
+    <!--"dstate" : null,-->
+    <!--"oilType" : "2",-->
+    <!--"relateType" : "0",-->
+    <!--"telphone" : "123"-->
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/vehicleCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/oilType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/tankSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/pName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/dstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/telphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

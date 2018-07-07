@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/time_choose_stv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        app:sLeftTextString=""
+        app:sRightIconHeight="15dp"
+        app:sRightIconRes="@drawable/arrow_right"
+        app:sRightIconWidth="15dp"
+        app:sRightTextColor="@color/color_text_black"
+        app:sRightTextString="请选择" />
+
+    <!--        app:sLeftTextString="时间选择控件"
+    -->
+    <!-- app:sCenterTextString="XX签名" -->
+
+</LinearLayout>

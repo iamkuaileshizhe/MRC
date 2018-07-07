@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/detail_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:middleTitle="日结详情" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/agree_disagree_btn_layout"
+        android:layout_below="@+id/detail_top_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/divider"
+            android:orientation="vertical">
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_sate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_5dp"
+                app:sCenterTextString="" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                android:layout_marginTop="@dimen/_5dp"
+                app:sLeftTextString="结算开始时间" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                android:layout_marginBottom="@dimen/_5dp"
+                app:sLeftTextString="结算结束时间" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                android:layout_marginTop="@dimen/_5dp"
+                app:sLeftTextColor="@color/text_black"
+                app:sLeftTextString="车辆运营统计" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_rec_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="记录编号" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_car_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="车牌号" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_driver_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="司机" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_safeman_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="押运员" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_daily_finish_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="本次结算完成订单数" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_daily_oil_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="本日加油量" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_daily_supplyoil_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="本日补给量" />
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                android:layout_marginTop="@dimen/_5dp"
+                app:sLeftTextColor="@color/text_black"
+                app:sLeftTextString="个人订单数量统计" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_per_finish_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="个人完成订单"
+                app:sRightIconHeight="@dimen/_14dp"
+                app:sRightIconRes="@drawable/arrow_right"
+                app:sRightIconWidth="@dimen/_14dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_per_sure_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="已确认订单"
+                app:sRightIconHeight="@dimen/_14dp"
+                app:sRightIconRes="@drawable/arrow_right"
+                app:sRightIconWidth="@dimen/_14dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_per_unsure_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="待确认订单"
+                app:sRightIconHeight="@dimen/_14dp"
+                app:sRightIconRes="@drawable/arrow_right"
+                app:sRightIconWidth="@dimen/_14dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_uncal_money_order_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="账期订单"
+                app:sRightIconHeight="@dimen/_14dp"
+                android:visibility="visible"
+                app:sRightIconRes="@drawable/arrow_right"
+                app:sRightIconWidth="@dimen/_14dp" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                android:layout_marginTop="@dimen/_5dp"
+                app:sLeftTextColor="@color/text_black"
+                app:sLeftTextString="个人订单数量统计" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_cash_money_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="账期支付金额" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_online_money_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="在线收款金额" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/balance_uncal_money_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_item_height"
+                app:sLeftTextString="未结算金额" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/agree_disagree_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/agree_btn"
+            style="@style/Font15_white"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/normal_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/agree_btn_select"
+            android:text="" />
+
+
+        <Button
+            android:id="@+id/disagree_btn"
+            style="@style/Font15_white"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/normal_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/declint_btn_select"
+            android:text="需要核对" />
+
+    </LinearLayout>
+
+</RelativeLayout>

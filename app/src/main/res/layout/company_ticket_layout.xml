@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="企业发票界面展示用"
+        android:textSize="@dimen/_20sp" />
+
+    <com.neocom.mobilerefueling.view.OrderComEdittextTicket
+        android:id="@+id/cop_ticket_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderComEdittextTicket
+        android:id="@+id/cop_ticket_tax_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderComEdittextTicket
+        android:id="@+id/cop_ticket_receive_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderComEdittextTicket
+        android:id="@+id/cop_ticket_receive_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderComEdittextTicket
+        android:id="@+id/cop_ticket_receive_telphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

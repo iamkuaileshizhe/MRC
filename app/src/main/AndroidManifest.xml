@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neocom.mobilerefueling">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <!-- Required -->
+    <permission
+        android:name="com.neocom.mobilerefueling.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.neocom.mobilerefueling.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- ======================================================================================== -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 要求当前设备必须要有NFC芯片 -->
+    <!-- 拨号权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- android:icon="@mipmap/logo" -->
+    <application
+        android:name=".globle.ItsmsApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo_comp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 高德地图测试 ID -->
+        <!-- <meta-data -->
+        <!-- android:name="com.amap.api.v2.apikey" -->
+        <!-- android:value="ca813cdecf2f85c3d082d28160d63488" /> -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9c31c2fe30cda07da9863e6b12ab2ef2" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5aa21d8cf29d980ea4000478" />
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".activity.APPLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="登录">
+
+
+        </activity>
+        <activity
+            android:name=".activity.SplashWithAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.nfc.action.NDEF_DISCOVERED" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <data android:mimeType="text/plain" /> -->
+            <!-- </intent-filter> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.nfc.action.NDEF_DISCOVERED" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <data -->
+            <!-- android:host="developer.android.com" -->
+            <!-- android:pathPrefix="/index.html" -->
+            <!-- android:scheme="http" /> -->
+            <!-- </intent-filter> -->
+
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.nfc.action.TAG_DISCOVERED" /> -->
+            <!-- </intent-filter> -->
+
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.nfc.action.TECH_DISCOVERED" /> -->
+            <!-- </intent-filter> -->
+
+
+            <!-- <meta-data -->
+            <!-- android:name="android.nfc.action.TECH_DISCOVERED" -->
+            <!-- android:resource="@xml/nfc_tech_filter" /> -->
+
+        </activity>
+        <activity android:name=".activity.ExampleActivity" />
+        <activity
+            android:name=".activity.ChooseOilCarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ChooseAddress"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.AddressListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.OrderDeliveryDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.PDFViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity
+            android:name=".activity.GetPiCiActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.OrdinaryOrderDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.GetOilDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.AddgetOilActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.SelectAddRessActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.ChangeWorkACtivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.OrderDetailNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.ChangeWkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.AddChangeWorkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.ShitWorkDetailActiivty"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.ChargeMoneyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.WriteNFCTagActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.WriteInNFCActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/str_write_text"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.YunYouDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="运油车详情" />
+        <activity
+            android:name=".activity.TiYouGongDanActivity"
+            android:label="提油工单" />
+        <activity
+            android:name=".activity.GetOilPiCiDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="获取批次详情" />
+        <activity
+            android:name=".activity.GetHeTongActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="获取合同列表" />
+        <activity
+            android:name=".activity.HeTongDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="合同详情" />
+        <activity
+            android:name=".activity.BuJiQueRenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="补给确认" />
+        <activity
+            android:name=".activity.MsgActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="消息界面" />
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="个人信息" />
+        <activity
+            android:name=".activity.ChooseShitPersonActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="交接班选择人" />
+        <activity
+            android:name=".xunfei.TtsDemo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="讯飞语音" />
+        <activity
+            android:name=".activity.ForgetPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="忘记密码" />
+        <activity
+            android:name=".activity.PaiSongDanJDDialogUI"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="派送单详情带弹窗"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WriteNFCUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="写入车辆NFC标签"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.UpdatePwd"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="修改密码" />
+        <activity
+            android:name=".activity.AboutUSActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="关于" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="注册界面" />
+        <activity
+            android:name=".activity.AddQianZaiKeHuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="添加潜在客户"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.GetQianZaiKeHuListUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="获取潜在客户列表" />
+        <activity
+            android:name=".activity.ZSKHListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="获取正式客户列表" />
+        <activity
+            android:name=".activity.DPFListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="待批复列表" />
+        <activity
+            android:name=".activity.CitySelecterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="城市选择列表" />
+        <activity
+            android:name=".activity.DSHKeHuAllActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="待审核客户列表" />
+        <activity
+            android:name=".activity.JGSHListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="价格审核列表" />
+        <activity
+            android:name=".activity.JieDanAtivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="加油车司机接单功能" />
+        <activity
+            android:name=".activity.BuJiRecActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="补给记录" />
+        <activity
+            android:name=".activity.TiYouListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="提油记录列表" />
+        <activity
+            android:name=".activity.DingDanListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="订单列表" />
+        <activity
+            android:name=".activity.DingDanWanChengActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="订单完成列表" />
+        <activity
+            android:name=".activity.JiaoJieBanCarListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="交接班车辆列表" />
+        <activity
+            android:name=".activity.SupplyListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="供应商列表" />
+        <activity
+            android:name=".activity.TiYouNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="提油列表" />
+        <activity
+            android:name=".activity.TiYouDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="提油详情" />
+        <activity
+            android:name=".activity.AddPiCiActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="新增批次信息" />
+        <activity
+            android:name=".activity.ImagesDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="查看图片" />
+        <activity
+            android:name=".activity.QrCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="二维码展示" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="微信分享回调" />
+        <activity
+            android:name=".activity.RecmentListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="我的推荐列表" />
+
+        <activity
+            android:name=".activity.CustomerMangerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="客户管理界面" />
+        <activity
+            android:name=".activity.DailyBalanceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="日清日结" />
+        <activity
+            android:name=".processor.JingBanRenSPActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="油品采购"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.GetCarListStateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="获取司机及安全员" />
+        <activity
+            android:name=".processor.WaitTodoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="待办事项" />
+        <activity
+            android:name=".processor.HaveDoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="已办事项" />
+        <activity
+            android:name=".activity.DailyBalanceDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="日清日结详情" />
+        <activity
+            android:name=".activity.JieSuanDailyBalanceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="已结算和未结算列表" />
+        <activity
+            android:name=".activity.UserSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="用户设置" />
+        <activity
+            android:name=".activity.DailyBlancePaiSongDanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="结算订单详情" />
+        <activity
+            android:name=".activity.IPSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="IP设置" />
+        <activity
+            android:name=".activity.UserSysSetting"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="设置的一级菜单" />
+        <activity
+            android:name=".activity.AccountSafeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="账户安全" />
+        <activity
+            android:name=".activity.MyRecommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="推荐列表" />
+        <activity
+            android:name=".activity.VoiceSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="语音播报设置" />
+        <activity
+            android:name=".activity.CurrentVersionAndIntroActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="当前版本和公司简介" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <service
+            android:name=".downServices.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- 友盟 -->
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <!-- 开始集成 极光推送 -->
+
+        <activity android:name=".jpush.MainActivity">
+
+
+        </activity>
+
+        <!-- For test only 测试高级功能 -->
+        <activity
+            android:name=".jpush.PushSetActivity"
+            android:label="@string/app_name" />
+        <!-- For test only 测试设置 -->
+        <activity
+            android:name=".jpush.SettingActivity"
+            android:label="@string/app_name" />
+
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+
+        <activity
+            android:name=".jpush.TestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.neocom.mobilerefueling" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.neocom.mobilerefueling.DataProvider"
+            android:exported="false" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.neocom.mobilerefueling" />
+            </intent-filter>
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.neocom.mobilerefueling.DownloadProvider"
+            android:exported="true" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.neocom.mobilerefueling.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.neocom.mobilerefueling" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.neocom.mobilerefueling" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.neocom.mobilerefueling" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- <meta-data -->
+        <!-- android:name="JPUSH_APPKEY" -->
+        <!-- android:value="1e3734456851f9a9ff7c8e44" /> &lt;!&ndash;  </>我的测试 appkey&ndash;&gt; -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="949901fd3a69fb2f1556d875" /> <!-- </>服务端 appkey -->
+
+
+        <!-- 极光推送集成完毕 -->
+
+        <service
+            android:name=".services.UploadService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

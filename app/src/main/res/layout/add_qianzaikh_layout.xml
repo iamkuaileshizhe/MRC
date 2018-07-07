@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/toptitle_layout" />
+
+
+    <ScrollView
+        android:id="@+id/sc_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_ll_sub"
+        android:layout_below="@+id/top_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                stv:sBackgroundDrawableRes="@color/divider"
+                stv:sLeftTextColor="@color/color_text_black"
+                stv:sLeftTextSize="14dp"
+                stv:sLeftTextString="客户基本信息"
+                stv:sLeftTopTextSize="@dimen/normal_font_size"
+                stv:sRightTextColor="@color/color_text_black"
+                stv:sRightTextSize="@dimen/normal_font_size" />
+
+            <LinearLayout
+                android:id="@+id/kehu_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--<com.allen.library.SuperTextView-->
+                <!--android:id="@+id/kehu_name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/item_normal_hight"-->
+                <!--stv:sLeftTextColor="@color/color_text_black"-->
+                <!--stv:sLeftTextSize="14dp"-->
+                <!--stv:sLeftTextString="客户名称"-->
+                <!--stv:sLeftTopTextSize="@dimen/normal_font_size"-->
+                <!--stv:sRightTextColor="@color/color_text_black"-->
+                <!--stv:sRightTextSize="@dimen/normal_font_size"-->
+                <!--stv:sRightTextString="华创寰宇" />-->
+
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/kehu_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="true"
+                    stv:mHint="请输入客户名称"
+                    stv:mText=""
+                    stv:mTitle="客户名称" />
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/kehu_sim_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="true"
+                    stv:mHint="请输入客户简称"
+                    stv:mText=""
+                    stv:mTitle="客户简称" />
+
+                <!--<com.allen.library.SuperTextView-->
+                <!--android:id="@+id/kehu_sim_name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/item_normal_hight"-->
+                <!--stv:sLeftTextColor="@color/color_text_black"-->
+                <!--stv:sLeftTextSize="14dp"-->
+                <!--stv:sLeftTextString="客户简称"-->
+                <!--stv:sLeftTopTextSize="@dimen/normal_font_size"-->
+                <!--stv:sRightTextColor="@color/color_text_black"-->
+                <!--stv:sRightTextSize="@dimen/normal_font_size"-->
+                <!--stv:sRightTextString="华创寰宇" />-->
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/kehu_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_normal_hight"
+                    stv:sLeftTextString="客户类型"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="请选择" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/kehu_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_normal_hight"
+                    stv:sLeftTextString="客户来源"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="请选择" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comp_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:orientation="vertical">
+
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/ex_show_kehu_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_layout_divider_height"
+                    android:layout_marginTop="@dimen/_5dp"
+                    stv:sBackgroundDrawableRes="@color/divider"
+                    stv:sLeftTextString="企业信息"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/double_arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="点击展开更多" />
+
+                <LinearLayout
+                    android:id="@+id/qiye_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/kehu_reg_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        stv:isEdit="true"
+                        stv:mHint="请输入企业注册号"
+                        stv:mText=""
+                        stv:mTitle="注册号" />
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/kehu_faren_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kehu_reg_num"
+                        stv:isEdit="true"
+                        stv:mHint="请输入法人姓名"
+                        stv:mText=""
+                        stv:mTitle="法人姓名" />
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/kehu_comp_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kehu_faren_name"
+                        stv:isEdit="true"
+                        stv:mHint="请输入企业地址"
+                        stv:mText=""
+                        stv:mTitle="企业地址" />
+                </LinearLayout>
+
+                <com.neocom.mobilerefueling.view.ExpandableLayout
+                    android:id="@+id/ex_kehu_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider"
+                    stv:el_duration="1000"
+                    stv:el_expanded="false"
+                    stv:el_parallax="0.5">
+
+
+                    <include layout="@layout/kehu_sourse_layout" />
+
+
+                </com.neocom.mobilerefueling.view.ExpandableLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/ex_show_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_layout_divider_height"
+                    android:layout_marginTop="@dimen/_5dp"
+                    stv:sBackgroundDrawableRes="@color/divider"
+                    stv:sLeftTextString="客户调查信息"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/double_arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="点击展开更多" />
+
+                <LinearLayout
+                    android:id="@+id/kehu_diaocha_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/check_car_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        android:layout_below="@+id/check_car_num"
+                        stv:sLeftTextString="车辆类型"
+                        stv:sRightIconHeight="15dp"
+                        stv:sRightIconRes="@drawable/arrow_down"
+                        stv:sRightIconWidth="15dp"
+                        stv:sRightTextString="请选择" />
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/check_oil_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        android:layout_below="@+id/check_paytype"
+                        stv:sLeftTextString="油品类型"
+                        stv:sRightIconHeight="15dp"
+                        stv:sRightIconRes="@drawable/arrow_down"
+                        stv:sRightIconWidth="15dp"
+                        stv:sRightTextString="请选择" />
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/check_refuel_way"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        android:layout_below="@+id/check_refuel_num"
+                        stv:sLeftTextString="补给方式"
+                        stv:sRightIconHeight="15dp"
+                        stv:sRightIconRes="@drawable/arrow_down"
+                        stv:sRightIconWidth="15dp"
+                        stv:sRightTextString="请选择" />
+
+                </LinearLayout>
+
+                <com.neocom.mobilerefueling.view.ExpandableLayout
+                    android:id="@+id/ex_check_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider"
+                    stv:el_duration="1000"
+                    stv:el_expanded="false"
+                    stv:el_parallax="0.5">
+
+                    <include layout="@layout/diaocha_layout" />
+
+                </com.neocom.mobilerefueling.view.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/ex_show_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_layout_divider_height"
+                    android:layout_marginTop="@dimen/_5dp"
+                    stv:sBackgroundDrawableRes="@color/divider"
+                    stv:sLeftTextString="联系人"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/double_arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="点击展开更多" />
+
+                <LinearLayout
+                    android:id="@+id/lianxiren_info_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/lianxiren_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        stv:isEdit="true"
+                        stv:mHint="请输入姓名"
+                        stv:mTitle="联系人" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0.5dp"
+                        android:background="@color/divider" />
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/lianxiren_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        stv:sLeftTextString="出生日期"
+                        stv:sRightIconHeight="15dp"
+                        stv:sRightIconRes="@drawable/arrow_right"
+                        stv:sRightIconWidth="15dp"
+                        stv:sRightTextString="请选择出生日期" />
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/lianxiren_mobi"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_normal_hight"
+                        android:layout_below="@+id/lianxiren_name"
+                        stv:isEdit="true"
+                        stv:mHint="请输入手机号"
+                        stv:mTitle="手机" />
+                </LinearLayout>
+                <!--000000000000000000000000000000000000000000000000-->
+                <com.neocom.mobilerefueling.view.ExpandableLayout
+                    android:id="@+id/ex_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider"
+                    stv:el_duration="1000"
+                    stv:el_expanded="false"
+                    stv:el_parallax="0.5">
+
+                    <include layout="@layout/lianxiren_layout" />
+
+                </com.neocom.mobilerefueling.view.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tijiaoren_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/tijiaoren_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_layout_divider_height"
+                    android:layout_marginTop="@dimen/_5dp"
+                    stv:sBackgroundDrawableRes="@color/divider"
+                    stv:sLeftTextString="提交人信息"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/double_arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="点击展开更多" />
+
+
+                <com.neocom.mobilerefueling.view.ExpandableLayout
+                    android:id="@+id/tijiaoren_info_ex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider"
+                    stv:el_duration="1000"
+                    stv:el_expanded="false"
+                    stv:el_parallax="0.5">
+
+                    <include layout="@layout/tijiaoren_info_layout" />
+
+                </com.neocom.mobilerefueling.view.ExpandableLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/youhuijine_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/youhuijine_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_layout_divider_height"
+                    android:layout_marginTop="@dimen/_5dp"
+                    stv:sBackgroundDrawableRes="@color/divider"
+                    stv:sLeftTextString="客户优惠金额"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/double_arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="点击展开更多" />
+
+
+                <com.neocom.mobilerefueling.view.ExpandableLayout
+                    android:id="@+id/youhuijine_info_ex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider"
+                    stv:el_duration="1000"
+                    stv:el_expanded="false"
+                    stv:el_parallax="0.5">
+
+                    <include layout="@layout/youhuijine_layout" />
+
+                </com.neocom.mobilerefueling.view.ExpandableLayout>
+
+
+            </LinearLayout>
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                stv:sBackgroundDrawableRes="@color/divider"
+                stv:sLeftTextColor="@color/color_text_black"
+                stv:sLeftTextSize="14sp"
+                stv:sLeftTextString="备注信息"
+                stv:sLeftTopTextSize="@dimen/normal_font_size"
+                stv:sRightTextColor="@color/color_text_black"
+                stv:sRightTextSize="@dimen/normal_font_size" />
+
+            <RelativeLayout
+                android:id="@+id/other_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/et_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/note_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入备注信息，最多50字"
+                    android:maxLength="50"
+                    android:minLines="3"
+                    android:textColor="@color/color_text_black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="@dimen/normal_font_size" />
+
+
+                <TextView
+                    android:id="@+id/remain_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/note_info"
+                    android:paddingBottom="@dimen/_5dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/grey_a5a5a5"
+                    android:textSize="@dimen/small_font_size" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+
+        <Button
+            android:id="@+id/save_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_login_selected"
+            android:text="保存"
+            android:textColor="@android:color/white" />
+        <!--android:text="保存"-->
+        <!--android:visibility="gone"-->
+        <!--android:background="@drawable/bg_btn_login_unselected"-->
+
+
+        <Button
+            android:id="@+id/submit_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/bg_btn_login_selected"
+
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size"
+            android:visibility="gone" />
+        <!--android:text="提交审核"-->
+
+        <Button
+            android:id="@+id/delete_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_delete_selected"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

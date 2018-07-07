@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/choose_oil_car_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.neocom.mobilerefueling.view.SearchEditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/search_edit_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:drawableDel="@drawable/edit_delete" />
+
+
+        <ListView
+            android:id="@+id/choose_oil_car_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="@dimen/_2dp"></ListView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:xyz="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title_bar"
+        layout="@layout/top_title_bar"></include>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line" />
+
+
+    <com.lzy.widget.AlphaIndicator
+        android:id="@+id/alphaIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <!--app:av_tabIconNormal="@mipmap/home_new_normal"-->
+        <!--app:av_tabIconSelected="@mipmap/home_new_pressed"-->
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="6dp"
+            app:av_tabIconNormal="@mipmap/app_tabbar_home"
+            app:av_tabIconSelected="@mipmap/app_tabbar_home_s"
+            app:av_tabText="首页"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="@color/mian_tab_col_normal"
+            app:av_textColorSelected="@color/mian_tab_col_select" />
+
+
+        <!--app:av_tabIconNormal="@mipmap/refuel_normal"-->
+        <!--app:av_tabIconSelected="@mipmap/refuel_pressed"-->
+
+        <!--<com.lzy.widget.AlphaView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:padding="6dp"-->
+        <!--app:av_tabIconNormal="@mipmap/app_tabbar_order"-->
+        <!--app:av_tabIconSelected="@mipmap/app_tabbar_order_s"-->
+        <!--app:av_tabText="接单"-->
+        <!--app:av_tabTextSize="15sp"-->
+        <!--app:av_textColorNormal="@color/mian_tab_col_normal"-->
+        <!--app:av_textColorSelected="@color/mian_tab_col_select"/>-->
+
+
+        <!--app:av_tabIconNormal="@mipmap/order_normal"-->
+        <!--app:av_tabIconSelected="@mipmap/order_pressed"-->
+
+        <!--<com.lzy.widget.AlphaView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:padding="6dp"-->
+        <!--app:av_tabIconNormal="@mipmap/app_tabbar_messsage"-->
+        <!--app:av_tabIconSelected="@mipmap/app_tabbar_messsage_s"-->
+        <!--app:av_tabText="补给记录"-->
+        <!--app:av_tabTextSize="15sp"-->
+        <!--app:av_textColorNormal="@color/mian_tab_col_normal"-->
+        <!--app:av_textColorSelected="@color/mian_tab_col_select"/>-->
+
+        <!--app:av_tabIconNormal="@mipmap/me_new_normal"-->
+        <!--app:av_tabIconSelected="@mipmap/me_new_pressed"-->
+
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="6dp"
+            app:av_tabIconNormal="@mipmap/app_tabbar_messsage"
+            app:av_tabIconSelected="@mipmap/app_tabbar_messsage_s"
+            app:av_tabText="消息"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="@color/mian_tab_col_normal"
+            app:av_textColorSelected="@color/mian_tab_col_select" />
+
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="6dp"
+            app:av_tabIconNormal="@mipmap/app_tabbar_mine"
+            app:av_tabIconSelected="@mipmap/app_tabbar_mine_s"
+            app:av_tabText="个人中心"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="@color/mian_tab_col_normal"
+            app:av_textColorSelected="@color/mian_tab_col_select" />
+    </com.lzy.widget.AlphaIndicator>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@color/home_bottom_bar_color"-->
+    <!--android:visibility="gone"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<com.neo.mobilerefueling.view.ChangeColorIconWithText-->
+    <!--android:id="@+id/id_indicator_one"-->
+    <!--android:layout_width="55dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="10dp"-->
+    <!--xyz:color="@color/navi_color"-->
+    <!--xyz:icon="@mipmap/home_normal"-->
+    <!--xyz:text="首页"-->
+    <!--xyz:text_size="12sp" />-->
+    <!--</RelativeLayout>-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+
+    <!--<com.neo.mobilerefueling.view.ChangeColorIconWithText-->
+    <!--android:id="@+id/id_indicator_two"-->
+    <!--android:layout_width="55dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="10dp"-->
+    <!--xyz:color="@color/navi_color"-->
+    <!--xyz:icon="@mipmap/function_normal"-->
+    <!--xyz:text="加油"-->
+    <!--xyz:text_size="12sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<com.neo.mobilerefueling.view.ChangeColorIconWithText-->
+    <!--android:id="@+id/id_indicator_three"-->
+    <!--android:layout_width="55dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="10dp"-->
+    <!--xyz:color="@color/navi_color"-->
+    <!--xyz:icon="@mipmap/msg_normal"-->
+    <!--xyz:text="订单"-->
+    <!--xyz:text_size="12sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<com.neo.mobilerefueling.view.ChangeColorIconWithText-->
+    <!--android:id="@+id/id_indicator_four"-->
+    <!--android:layout_width="55dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="10dp"-->
+    <!--xyz:color="@color/navi_color"-->
+    <!--xyz:icon="@mipmap/me_normal"-->
+    <!--xyz:text="我的"-->
+    <!--xyz:text_size="12sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

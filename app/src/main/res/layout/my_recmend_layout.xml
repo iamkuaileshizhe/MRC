@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/my_recment_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:middleTitle="我的推荐列表" />
+
+
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightViewMarginLeft="@dimen/_2dp"-->
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_recment_topbar"
+        android:orientation="vertical">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/my_recomandor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_2dp"
+            stv:sLeftTextString="我的推荐人" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/my_rec_no"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_2dp"
+            stv:sLeftTextString="我的推荐" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/rec_list_fg"
+        android:name="com.neocom.mobilerefueling.fragment.RecmentListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/share_to_friends"
+        android:layout_below="@+id/menu" />
+
+
+    <Button
+        android:id="@+id/share_to_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/charge_money_select_bg"
+        android:text="推荐给好友"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/normal_font_size" />
+
+</RelativeLayout>

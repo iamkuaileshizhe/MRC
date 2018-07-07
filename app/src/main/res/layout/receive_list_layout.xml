@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_line"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.view.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.neocom.mobilerefueling.view.XListView
+            android:id="@+id/receive_listview"
+            android:divider="@color/divider_line"
+            android:dividerHeight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.neocom.mobilerefueling.view.LoadingLayout>
+
+
+</LinearLayout>

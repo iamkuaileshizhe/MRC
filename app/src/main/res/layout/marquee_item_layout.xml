@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginLeft="@dimen/_14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!--<View-->
+            <!--android:layout_width="2.5dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:background="@color/col_login_btn_normal" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:text="今日油价"-->
+            <!--android:textColor="@color/mian_tab_font_color"-->
+            <!--android:textSize="@dimen/normal_font_size" />-->
+
+            <TextView
+                android:id="@+id/oil_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_2dp"
+                android:layout_toRightOf="@+id/gv_iv"
+                android:gravity="center_vertical"
+                android:textColor="@color/mian_tab_font_color"
+                android:textSize="@dimen/_16sp" />
+            <!--android:text="柴油 5#"-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<View-->
+            <!--android:layout_width="2.5dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:background="@color/col_login_btn_normal" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:text="当前油价"-->
+            <!--android:textColor="@color/mian_tab_font_color"-->
+            <!--android:textSize="@dimen/small_font_size" />-->
+
+            <TextView
+                android:id="@+id/oil_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/mian_tab_font_color"
+                android:textSize="@dimen/_16sp" />
+            <!--android:text="8.9/L"-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal">
+
+            <!--<View-->
+            <!--android:layout_width="2.5dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:background="@color/col_login_btn_normal" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:text="优惠额度"-->
+            <!--android:textColor="@color/mian_tab_font_color"-->
+            <!--android:textSize="@dimen/small_font_size" />-->
+
+
+            <TextView
+                android:id="@+id/oil_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/mian_tab_font_color"
+                android:textSize="@dimen/_16sp" />
+            <!--android:text="13%"-->
+
+            <ImageView
+                android:id="@+id/gv_up_down"
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginLeft="@dimen/_2dp" />
+            <!--android:src="@mipmap/arrow_up_green"-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:padding="@dimen/_5dp">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/oil_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/_10dp"-->
+    <!--android:layout_toRightOf="@+id/gv_iv"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="柴油 5#"-->
+    <!--android:textColor="@color/mian_tab_font_color"-->
+    <!--android:textSize="@dimen/_20sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/oil_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/_10dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="8.9/L"-->
+    <!--android:textColor="@color/mian_tab_font_color"-->
+    <!--android:textSize="@dimen/_20dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/oil_percent"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toLeftOf="@+id/gv_up_down"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="13%"-->
+    <!--android:textColor="@color/mian_tab_font_color"-->
+    <!--android:textSize="@dimen/_20dp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/gv_up_down"-->
+    <!--android:layout_width="@dimen/_10dp"-->
+    <!--android:layout_height="@dimen/_20dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/_2dp"-->
+    <!--android:layout_marginRight="@dimen/_10dp"-->
+    <!--android:layout_toLeftOf="@+id/gv_up_arrow"-->
+    <!--android:src="@mipmap/lv_up" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/gv_up_arrow"-->
+    <!--android:layout_width="@dimen/_8dp"-->
+    <!--android:layout_height="@dimen/_14dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/_5dp"-->
+    <!--android:src="@mipmap/load_more" />-->
+
+    <!--</RelativeLayout>-->
+
+
+</LinearLayout>

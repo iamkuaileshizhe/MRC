@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:padding="2dp">
+
+
+        <ImageView
+            android:id="@+id/me_fg_menu_icon_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/me_fg_menu_txt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/me_fg_menu_icon_iv"
+            android:text=" "
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/normal_font_size"
+             />
+
+        <ImageView
+            android:id="@+id/me_fg_menu_guid"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ex_close" />
+
+    </RelativeLayout>
+</RelativeLayout>

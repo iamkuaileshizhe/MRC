@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5dp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/_5dp">
+
+        <TextView
+            android:id="@+id/kehu_comp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="华创寰宇"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <TextView
+            android:id="@+id/kehu_comp_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="华创寰宇"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/small_font_size" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/kehu_detail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/_5dp"
+        android:paddingLeft="@dimen/_5dp"
+        android:src="@drawable/arrow_right"
+        android:textColor="@color/color_text_black" />
+
+</LinearLayout>

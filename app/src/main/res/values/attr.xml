@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="icon" format="reference"></attr>
+    <attr name="color" format="color"></attr>
+    <attr name="text" format="string"></attr>
+    <attr name="text_size" format="dimension"></attr>
+
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="icon"></attr>
+        <attr name="color"></attr>
+        <attr name="text"></attr>
+        <attr name="text_size"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageAvtar">
+        <attr name="border_width" format="dimension"></attr>
+        <attr name="border_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingLayout">
+        <attr name="loading_layout_error_img" format="reference" />
+        <attr name="loading_layout_error_text" format="string" />
+        <attr name="loading_layout_empty_img" format="reference" />
+        <attr name="loading_layout_empty_text" format="string" />
+        <attr name="loading_layout_loading_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SearchEditText">
+        <attr name="drawableDel" format="reference" />
+    </declare-styleable>
+
+
+    <!--按钮样式-->
+    <declare-styleable name="RoundedTextView">
+        <attr name="rtv_corner_radius" format="dimension" />
+        <attr name="rtv_border_width" format="dimension" />
+        <attr name="rtv_border_color" format="color" />
+        <attr name="rtv_background_color" format="color" />
+    </declare-styleable>
+
+    <!--打钩样式-->
+    <declare-styleable name="TickView">
+        <attr name="ctv_circleRadius" format="dimension" />
+        <attr name="ctv_circle_color" format="dimension" />
+        <attr name="ctv_tick_stroke_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference" />
+        <attr name="mvAnimDuration" format="integer|reference" />
+        <attr name="mvTextSize" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="isEditeTextView">
+        <attr name="mTitle" format="string" />
+        <attr name="mText" format="string" />
+        <attr name="isEdit" format="boolean" />
+        <attr name="mHint" format="string" />
+        <attr name="textMaxLength" format="integer" />
+        <attr name="mInputType" format="enum">
+            <enum name="textMutiLine" value="0" />
+            <enum name="number" value="1" />
+
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="android:orientation" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiLineEditText">
+
+        <attr name="title" format="string" />
+        <attr name="multiEdit" format="boolean" />
+        <attr name="hint" format="string" />
+        <attr name="content" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TopTitleBar">
+        <attr name="lefeImage" format="reference" />
+
+        <attr name="middleTitle" format="string" />
+        <attr name="rightTitle" format="string" />
+        <attr name="rightImageView" format="reference" />
+
+    </declare-styleable>
+</resources>

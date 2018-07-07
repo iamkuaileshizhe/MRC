@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/diaocha_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/check_paytype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="付款方式"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择" />
+
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_oil_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入发票要求"
+        stv:mText=""
+        stv:mTitle="发票要求" />
+
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_car_num"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_oil_ticket"-->
+    <!--stv:sLeftTextString="车辆数量"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_car_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入车辆数量"
+        stv:mText=""
+        stv:mTitle="车辆数量" />
+
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_refuel_rate"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_car_type"-->
+    <!--stv:sLeftTextString="补给频率"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_refuel_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入补给频率"
+        stv:mText=""
+        stv:mTitle="补给频率" />
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_refuel_num"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_refuel_rate"-->
+    <!--stv:sLeftTextString="补给数量"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_refuel_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入补给数量"
+        stv:mText=""
+        stv:mTitle="补给数量" />
+
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_refuel_addr"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_refuel_num"-->
+    <!--stv:sLeftTextString="期望地区"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_refuel_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入期望地区"
+        stv:mText=""
+        stv:mTitle="期望地区" />
+
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_refuel_oil_type"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_refuel_addr"-->
+    <!--stv:sLeftTextString="油品期许"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_refuel_oil_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入油品期许"
+        stv:mText=""
+        stv:mTitle="油品期许" />
+
+
+    <!--<com.allen.library.SuperTextView-->
+    <!--android:id="@+id/check_refuel_others_service"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/item_normal_hight"-->
+    <!--android:layout_below="@+id/check_refuel_addr"-->
+    <!--stv:sLeftTextString="其他服务"-->
+    <!--stv:sRightIconHeight="15dp"-->
+    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+    <!--stv:sRightIconWidth="15dp"-->
+    <!--stv:sRightTextString="XX" />-->
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/check_refuel_others_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stv:isEdit="true"
+        stv:mHint="请输入其他服务"
+        stv:mText=""
+        stv:mTitle="其他服务" />
+
+
+</LinearLayout>

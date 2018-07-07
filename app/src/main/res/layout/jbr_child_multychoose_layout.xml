@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/multi_select_title"
+        style="@style/Font13_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_5dp"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingTop="@dimen/_5dp"
+        android:text="审批意见"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5dp"
+        android:background="@color/divider"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+        <!--
+                android:layout_marginTop="@dimen/_5dp"
+
+        -->
+
+        <!--android:background="@drawable/et_bg"-->
+
+
+        <TextView
+            android:id="@+id/multi_select_title_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center"
+            android:hint="请选择车辆"
+            android:maxLength="50"
+            android:minLines="3"
+            android:textColor="@color/color_text_black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/normal_font_size" />
+
+        <!--            android:hint="请输入审批意见，最多50字"
+-->
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5dp"
+        android:background="@color/divider" />
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical">-->
+
+
+    <!--<com.neocom.mobilerefueling.view.MultiLineEditText--><!--android:id="@+id/jbr_child_multichoose_tv"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--app:multiEdit="false"--><!--app:content="1231231232132132123"--><!--app:hint="请输入内容" />-->
+
+    <!--&lt;!&ndash;app:content=""&ndash;&gt;--><!--&lt;!&ndash;app:hint="这是提示"&ndash;&gt;--><!--&lt;!&ndash;app:multiEdit="true"&ndash;&gt;--><!--&lt;!&ndash;app:title="标题"&ndash;&gt;-->
+
+    <!--</LinearLayout>-->

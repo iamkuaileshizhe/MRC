@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/menu_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        app:sBackgroundDrawableRes="@color/divider"
+        app:sLeftTextColor="@color/color_text_black"
+        app:sLeftTextSize="@dimen/normal_font_size"
+        app:sLeftTextString=""
+        app:sLeftTopTextSize="@dimen/normal_font_size"
+        app:sRightTextColor="@color/color_text_black"
+        app:sRightTextSize="@dimen/normal_font_size" />
+
+    <!--内层的RecyclerView-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/menu_content_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants" />
+
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/_0.5dp"-->
+    <!--android:background="@color/divider" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_chenbanbumen_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:mText="北京华创寰宇"-->
+    <!--app:mTitle="承办部门"-->
+    <!--app:showLine="false" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_caigoumingcheng_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:mText="华为手机若干"-->
+    <!--app:mTitle="采购名称"-->
+    <!--app:showLine="false" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_zongjinge_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:mText="123456"-->
+    <!--app:mTitle="总金额"-->
+    <!--app:showLine="false" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_shenqingtime_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:mText="2018-4-23 09:21:21"-->
+    <!--app:mTitle="申请时间"-->
+    <!--app:showLine="false" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_caigou_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:mText="采购内容"-->
+    <!--app:mTitle="采购内容"-->
+    <!--app:showLine="false" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/_1dp"-->
+    <!--android:background="@color/divider" />-->
+
+</LinearLayout>

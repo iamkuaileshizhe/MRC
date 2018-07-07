@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_line"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:text="提油详情"
+                android:textColor="@color/top_bar_font_color"
+                android:textColorHint="@color/colorBarText"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/top_bar_ok_ll"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="7dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginTop="7dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="确定"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/colorBarText"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="17sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="invisible" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sc_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_ll_sub_oil"
+        android:layout_below="@+id/top_title_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.neocom.mobilerefueling.view.OrderComEdittext
+                android:id="@+id/get_oil_noteno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/divider_line" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_gongyingshang"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="供应商" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="供应商地址" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_amount_num"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="预计提油量" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_amount_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="预计提油时间" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_diaodu_user"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="调度人" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/ty_diaodu_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                stv:sLeftTextSize="@dimen/normal_font_size"
+                stv:sLeftTextString="调度时间" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_car_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_car_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_driver_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/remain_tank_oil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="false"
+                    stv:mHint=" "
+                    stv:mText=""
+                    stv:mTitle="剩余油量" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/divider_line"
+                android:visibility="gone" />
+
+            <com.neocom.mobilerefueling.view.OrderComEdittext
+                android:id="@+id/get_oil_youyangbianhao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/_1dp"-->
+            <!--android:background="@color/divider_line" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <!--<com.neocom.mobilerefueling.view.OrderComEdittext-->
+                <!--android:id="@+id/get_oil_youyangbianhao"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_cunfangweizhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line" />-->
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_remian_oil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line" />-->
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_get_oil_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line" />-->
+
+                <com.neocom.mobilerefueling.view.OrderComEdittext
+                    android:id="@+id/get_oil_get_oil_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical">
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/get_oil_pici"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/more" />
+
+
+                    <!--GetPiCiActivity-->
+
+                    <ImageView
+                        android:id="@+id/more"
+                        android:layout_width="@dimen/_10dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:background="@mipmap/load_more" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/get_oil_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/more_a" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:indeterminate="false"
+                        android:progress="0"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/more_a"
+                        android:layout_width="@dimen/_10dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:background="@mipmap/load_more" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical">
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/get_oil_hetong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/more_b" />
+
+
+                    <ImageView
+                        android:id="@+id/more_b"
+                        android:layout_width="@dimen/_10dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:background="@mipmap/load_more" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <com.neocom.mobilerefueling.view.OrderComEdittext
+                android:id="@+id/get_oil_note_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:orientation="vertical">
+
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/ty_youyang_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="false"
+                    stv:mHint="请输入油样编号"
+                    stv:mText=""
+                    stv:mTitle="油样编号" />
+
+                <!--<com.allen.library.SuperTextView-->
+                <!--android:id="@+id/ty_youyang_code"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:clickable="false"-->
+                <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+                <!--stv:sLeftTextString="油样编号" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                <!--android:id="@+id/ty_place"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:clickable="false"-->
+                <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+                <!--stv:sLeftTextString="存放位置" />-->
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/ty_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="false"
+                    stv:mHint="请输入存放位置"
+                    stv:mText=""
+                    stv:mTitle="存放位置" />
+
+
+                <!--<com.allen.library.SuperTextView-->
+                <!--android:id="@+id/remain_tank_oil"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:clickable="false"-->
+                <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+                <!--stv:sLeftTextString="剩余油量(吨)" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/pounds_before"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        stv:isEdit="false"
+                        stv:mHint="请输入磅前质量"
+                        stv:mInputType="number"
+                        stv:mText=""
+                        stv:mTitle="磅前质量" />
+
+                    <TextView
+                        android:id="@+id/pounds_before_danwei"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吨"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/pounds_after"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        stv:isEdit="false"
+                        stv:mHint="请输入磅后质量"
+                        stv:mInputType="number"
+                        stv:mText=""
+                        stv:mTitle="磅后质量" />
+
+                    <TextView
+                        android:id="@+id/pounds_after_danwei"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吨"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/purchase_num"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        stv:isEdit="false"
+                        stv:mHint="提油量"
+                        stv:mInputType="number"
+                        stv:mText=""
+                        stv:mTitle="提油量" />
+
+                    <TextView
+                        android:id="@+id/purchase_num_danwei"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吨"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/complete_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    stv:isEdit="false"
+                    stv:mHint="完成时间"
+                    stv:mText=""
+                    stv:mTitle="提油时间" />
+
+                <!--<com.neocom.mobilerefueling.view.isEditeTextView-->
+                <!--android:id="@+id/upload_pic"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--stv:isEdit="false"-->
+                <!--stv:mHint="附件"-->
+                <!--stv:mText=""-->
+                <!--stv:mTitle="上传附件" />-->
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/upload_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:clickable="false"
+                    stv:sLeftTextSize="@dimen/normal_font_size"
+                    stv:sLeftTextString="上传图片"
+                    stv:sRightIconHeight="17dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="17dp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll_sub_oil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/submit_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#B1B1B1"
+            android:text="到场确认"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submit_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_login_selected"
+            android:text="确定提油"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

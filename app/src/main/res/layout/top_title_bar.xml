@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+<!-- android:layout_height="@dimen/abc_action_bar_default_height_material"-->
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:text="哥们儿加油"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="@dimen/_20sp"
+            android:textColor="@color/colorBarText"
+            android:textColorHint="@color/colorBarText"
+            android:textSize="20sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/ordinary_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通用户" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/transfer_user"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="运油车" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/trans_oil_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="补给车" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/add_get_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加提油工单" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:src="@mipmap/addmore" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:textColor="@color/colorBarText"
+            android:textSize="9sp" />
+    </LinearLayout>
+</LinearLayout>

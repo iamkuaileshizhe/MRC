@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/toptitle_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/divider" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/youpin_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_normal_hight"
+                stv:sLeftTextString="油品型号"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_down"
+                stv:sRightIconWidth="15dp"
+                stv:sRightTextString="请选择" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/youpin_gb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_normal_hight"
+                stv:sLeftTextString="油品国标"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_down"
+                stv:sRightIconWidth="15dp"
+                stv:sRightTextString="请选择" />
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/supply_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_normal_hight"
+                stv:sLeftTextString="供应商"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_down"
+                stv:sRightIconWidth="15dp"
+                stv:sRightTextString="请选择" />
+
+            <com.neocom.mobilerefueling.view.isEditeTextView
+                android:id="@+id/sample_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                stv:isEdit="true"
+                stv:mHint="请输入样品编号"
+                stv:mText=""
+                stv:mTitle="样品编号" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/fuel_density"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    stv:isEdit="true"
+                    stv:mHint="请输入油品密度"
+                    stv:mText=""
+                    stv:mTitle="油品密度" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="千克/升"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="@dimen/normal_font_size" />
+
+            </LinearLayout>
+
+            <com.neocom.mobilerefueling.view.isEditeTextView
+                android:id="@+id/supply_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                stv:isEdit="true"
+                stv:mHint="请输入联系人"
+                stv:mText=""
+                stv:mTitle="联系人" />
+
+            <com.neocom.mobilerefueling.view.isEditeTextView
+                android:id="@+id/supply_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                stv:isEdit="true"
+                stv:mHint="请输入联系电话"
+                stv:mText=""
+                stv:mTitle="联系电话" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/add_file"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_normal_hight"
+                stv:sLeftTextString="添加附件"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@mipmap/add"
+                stv:sRightIconWidth="15dp"
+                stv:sRightTextString="请选择" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_layout_divider_height"
+                stv:sBackgroundDrawableRes="@color/divider"
+                stv:sLeftTextColor="@color/color_text_black"
+                stv:sLeftTextSize="14sp"
+                stv:sLeftTextString="备注信息"
+                stv:sLeftTopTextSize="@dimen/normal_font_size"
+                stv:sRightTextColor="@color/color_text_black"
+                stv:sRightTextSize="@dimen/normal_font_size" />
+
+            <RelativeLayout
+                android:id="@+id/other_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/note_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入备注信息，最多50字"
+                    android:maxLength="50"
+                    android:minLines="3"
+                    android:textColor="@color/color_text_black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="@dimen/normal_font_size" />
+
+
+                <TextView
+                    android:id="@+id/remain_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/note_info"
+                    android:paddingBottom="@dimen/_5dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/grey_a5a5a5"
+                    android:textSize="@dimen/small_font_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/submit_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_zxjgxg_selected"
+        android:text="保存批次"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/normal_font_size" />
+
+</RelativeLayout>

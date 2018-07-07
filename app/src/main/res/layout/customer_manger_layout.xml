@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/customer_manger_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!-- android:visibility="gone"-->
+
+        <com.allen.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            stv:sBackgroundDrawableRes="@color/divider_line"
+            stv:sLeftTextString="销售经理 --- 1   销售主管  ---2"
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/qianzai_kehu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="添加潜在客户 ---1  ---2"
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/qianzai_kehu_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="潜在客户列表 ---1 ---2"
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/zs_kehu_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="正式客户列表"
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/dpf_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="待批复审核列表 ---1  ---2 "
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/dsh_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="待处理审核列表        ---2 "
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/jgsh_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="价格审核列表"
+            stv:sRightIconHeight="15dp"
+            stv:sRightIconRes="@drawable/arrow_right"
+            stv:sRightIconWidth="15dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/jiesuan_tpb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:middleTitle="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/divider" />
+
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/daily_balance_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

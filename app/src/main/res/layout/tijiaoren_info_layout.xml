@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/tijiaoren_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="姓名"
+        stv:sRightTextString="" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/tijiaoren_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="手机"
+        stv:sRightTextString="" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/tijiaoren_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="电子邮箱"
+        stv:sRightTextString="" />
+
+
+</LinearLayout>

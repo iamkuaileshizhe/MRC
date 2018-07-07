@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:state_focused="true" android:drawable="@color/huibai" /> <!-- 获得焦点  -->
+    <item android:state_pressed="true"  android:drawable="@color/huibai" /> <!-- 点击  -->  
+    <item android:state_selected="true" android:drawable="@color/huibai" /> <!-- 选中  -->
+    <item android:drawable="@color/white" />  <!-- 无动作   -->
+    
+</selector>

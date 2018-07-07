@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/titile_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="center_vertical|center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="提油记录"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:textSize="@dimen/normal_font_size" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+    <!--android:id="@+id/divider_line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/_1dp"-->
+    <!--android:layout_below="@+id/titile_bar"-->
+    <!--android:background="@color/divider" />-->
+
+    <com.neocom.mobilerefueling.view.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.neocom.mobilerefueling.view.XListView
+            android:id="@+id/get_oil_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/divider_line"
+            android:dividerHeight="@dimen/_5dp" />
+
+
+    </com.neocom.mobilerefueling.view.LoadingLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/get_oil_ll"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="@dimen/_5dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:visibility="gone">-->
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:src="@mipmap/add_address" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:text="添加提油工单"-->
+    <!--android:textColor="@color/top_bar_font_color"-->
+    <!--android:textSize="25sp" />-->
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

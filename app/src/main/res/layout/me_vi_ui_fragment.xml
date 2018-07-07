@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+    <!--#55D4D5D7-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/price_all"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/me_top_bg">
+
+
+                <RelativeLayout
+                    android:id="@+id/back_setting_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@color/me_top_bg"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_20dp">
+
+
+                    <com.neocom.mobilerefueling.view.userview.FloatCircleImage
+                        android:id="@+id/me_fg_user_avatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/_40dp"
+                        android:src="@mipmap/s_comp_down" />
+                    <!--android:src="@mipmap/app_mine_photoman" -->
+
+                    <LinearLayout
+                        android:id="@+id/avtar_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_toRightOf="@+id/me_fg_user_avatar"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5dp">
+
+
+                        <TextView
+                            android:id="@+id/me_fg_nick_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <TextView
+                            android:id="@+id/me_fg_comp_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/normal_font_size"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/me_fg_sinature_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/normal_font_size" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/me_top_bg" />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/me_account_safe_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    stv:sLeftTextString="账号安全"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="15dp" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/user_setting_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    stv:sLeftTextString="系统设置"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="15dp" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/me_recommend_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    stv:sLeftTextString="我的推荐"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="15dp" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="2dp"
+                    stv:sLeftTextString="关于我们"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="15dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10dp"
+
+                android:orientation="vertical">
+
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/user_info"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="个人信息"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/upd_pwd"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="修改密码"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/tts_speach"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--android:layout_marginTop="2dp"-->
+                    <!--stv:sDividerLineType="both"-->
+                    <!--stv:sLeftTextString="语音播报"-->
+                    <!--stv:sRightViewType="switchBtn"-->
+                    <!--stv:sSwitchIsChecked="true"-->
+                    <!--stv:sThumbResource="@drawable/thumb"-->
+                    <!--stv:sTrackResource="@drawable/track" />-->
+
+
+
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/share_friend"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_marginTop="@dimen/_2dp"-->
+                    <!--stv:sLeftTextString="推荐给朋友"-->
+                    <!--stv:sRightIconHeight="17dp"-->
+                    <!--stv:sRightIconRes="@mipmap/share_friends"-->
+                    <!--stv:sRightIconWidth="17dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/rec_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_marginTop="@dimen/_2dp"-->
+                    <!--stv:sLeftTextString="我的推荐列表"-->
+                    <!--stv:sRightIconHeight="17dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="17dp" />-->
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/supply_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="2dp"
+                    stv:sLeftTextString="供应商列表"
+                    android:visibility="gone"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_right"
+                    stv:sRightIconWidth="15dp" />
+
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/version_code"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="版本号"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+                <!--stv:sRightTextString="1.0.1"-->
+
+
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/daily_balance_stv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--stv:sLeftTextString="日清日结"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/process_stv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--stv:sLeftTextString="油品采购"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/process_plan_stv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--stv:sLeftTextString="油品采购计划"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/process_wait_todo_stv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--stv:sLeftTextString="待办事项"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/process_have_done_stv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--stv:sLeftTextString="已办事项"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:visibility="gone">
+                    <!-- android:visibility="gone"-->
+
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/kehu_manger"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        stv:sLeftTextString="客户管理"
+                        stv:sRightIconHeight="15dp"
+                        stv:sRightIconRes="@drawable/arrow_right"
+                        stv:sRightIconWidth="15dp" />
+
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/qianzai_kehu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="潜在客户"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/qianzai_kehu_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="潜在客户列表"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/zs_kehu_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="正式客户列表"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/dpf_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="待批复审核列表"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/dsh_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="待处理审核列表"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+                    <!--<com.allen.library.SuperTextView-->
+                    <!--android:id="@+id/jgsh_list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--stv:sLeftTextString="价格审核列表"-->
+                    <!--stv:sRightIconHeight="15dp"-->
+                    <!--stv:sRightIconRes="@drawable/arrow_right"-->
+                    <!--stv:sRightIconWidth="15dp" />-->
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/me_fg_exit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_login_selected"
+                android:text="退出登录"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

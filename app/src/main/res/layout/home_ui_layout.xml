@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/viewpager_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--<com.neocom.mobilerefueling.view.HorizontalViewPager-->
+        <!--android:id="@+id/vp_home_fg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="240dp" />-->
+
+
+        <RelativeLayout
+            android:id="@+id/rl_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55000000" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/call_iv"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_14dp"
+                android:background="@mipmap/app_home_phone" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="哥们加油"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+
+
+            <ImageView
+                android:id="@+id/me_iv"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_14dp"
+                android:background="@mipmap/app_home_login" />
+
+        </RelativeLayout>
+
+        <!--#55000000-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@id/vp_home_fg"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="8dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_intro_home_fg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:ellipsize="end"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="我是文本"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="16sp"-->
+        <!--android:visibility="invisible" />-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/dot_layout_home_fg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/viewpager_rl"
+        android:background="@color/divider_line" />
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/clear_car_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_below="@+id/divider_line"
+        app:sLeftTextString="车辆剩余油量"
+        app:sRightBottomTextString="油量清零" />
+
+    <RelativeLayout
+        android:id="@+id/menu_gv_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_oil_price_ll"
+        android:layout_below="@+id/clear_car_info">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/menu_bg_iv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:src="@mipmap/app_home_darkback" />-->
+
+
+        <GridView
+            android:id="@+id/home_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:horizontalSpacing="@dimen/_5dp"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/_5dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider_line_menu"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/menu_gv_rl"
+        android:background="@color/mian_tab_col_normal" />
+
+
+    <LinearLayout
+        android:id="@+id/main_oil_price_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:orientation="vertical"
+        android:padding="@dimen/_5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginLeft="@dimen/_14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="2.5dp"
+                    android:layout_height="18dp"
+                    android:background="@color/col_login_btn_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="今日油价"
+                    android:textColor="@color/mian_tab_font_color"
+                    android:textSize="@dimen/normal_font_size" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="当前油价"
+                    android:textColor="@color/mian_tab_font_color"
+                    android:textSize="@dimen/small_font_size" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="优惠额度"
+                    android:textColor="@color/mian_tab_font_color"
+                    android:textSize="@dimen/small_font_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/viewpager_rl"
+            android:background="@color/divider_line"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_5dp"
+            android:visibility="gone">
+
+
+            <com.neocom.mobilerefueling.view.MarqueeView
+                android:id="@+id/marqueeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mvAnimDuration="1000"
+                app:mvInterval="3000"
+                app:mvTextSize="14sp" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/gv_iv"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/gv_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_10dp"-->
+            <!--android:layout_toRightOf="@+id/gv_iv"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="柴油 5#"-->
+            <!--android:textSize="@dimen/_20sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/gv_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_10dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="8.9/L"-->
+            <!--android:textSize="@dimen/_20dp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/gv_percent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@+id/gv_up_down"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="13%"-->
+            <!--android:textSize="@dimen/_20dp" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/gv_up_down"-->
+            <!--android:layout_width="@dimen/_10dp"-->
+            <!--android:layout_height="@dimen/_20dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_2dp"-->
+            <!--android:layout_marginRight="@dimen/_10dp"-->
+            <!--android:layout_toLeftOf="@+id/gv_up_arrow"-->
+            <!--android:src="@mipmap/lv_up" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/gv_up_arrow"-->
+            <!--android:layout_width="@dimen/_8dp"-->
+            <!--android:layout_height="@dimen/_14dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_5dp"-->
+            <!--android:src="@mipmap/load_more" />-->
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

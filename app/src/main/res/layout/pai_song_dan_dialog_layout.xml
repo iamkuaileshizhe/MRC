@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="加油车详情"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/close_dg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_close"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/oil_l_tv"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="center_vertical|center"
+                android:padding="5dp"
+                android:text="升"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/oil_t_tv"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="center_vertical|center"
+                android:padding="5dp"
+                android:text="吨"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="车牌号"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_chepaihao"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请检索车牌号"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/btn_cx_cph"-->
+            <!--style="@style/Font13_red"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/rec_stroke_red"-->
+            <!--android:gravity="center"-->
+            <!--android:visibility="gone"-->
+            <!--android:text="查询车牌" />-->
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_margin="@dimen/_5dp"
+                android:src="@mipmap/ex_close" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_lianxiren"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="联系电话"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_lianxidianhua"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/time_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加油完成时间"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_finish_time"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请选择加油完成时间"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/choose_time_arrow_iv"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_margin="@dimen/_5dp"
+                android:src="@mipmap/ex_close" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="油品类型"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_youpinleixing"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请选择油品类型"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_margin="@dimen/_5dp"
+                android:src="@mipmap/ex_close"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/divider_height"-->
+        <!--android:background="@color/divider" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="国标"
+                android:textColor="@color/color_text_black" />
+
+
+            <TextView
+                android:id="@+id/item_guobiao"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请输入国标"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_margin="@dimen/_5dp"
+                android:src="@mipmap/ex_close"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="加油量"
+                android:textColor="@color/color_text_black" />
+
+
+            <EditText
+                android:id="@+id/item_jiayouliang"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请输入加油量"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:textColor="@color/color_text_black"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/add_oil_unit"
+                style="@style/Font13_black"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/color_text_black" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="单价" />
+
+
+            <EditText
+                android:id="@+id/item_danjia_Et"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请输入单价"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textCursorDrawable="@null" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Font13_black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="本次费用" />
+
+
+            <EditText
+                android:id="@+id/item_feiyong_Et"
+                style="@style/Font13_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:gravity="right|center_vertical"
+                android:hint="请输入本次费用"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+
+            android:background="@color/divider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.neocom.mobilerefueling.view.OrderConbindView
+                android:id="@+id/item_danjia"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/add_oil_price"
+                style="@style/Font13_black"
+                android:layout_width="40dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="单价" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider"
+            android:visibility="visible" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/item_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+
+        <LinearLayout
+            android:id="@+id/bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/cancle_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_login_unselected"
+                android:text="取消"
+                android:textSize="@dimen/normal_font_size" />
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_login_selected"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/list_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ListView
+            android:id="@+id/list_oil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_car_list_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+
+        android:visibility="gone"
+
+
+        >
+
+
+        <!--android:visibility="gone"-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_dis"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/_5dp"
+                android:src="@mipmap/back_top" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_5dp"
+                android:gravity="center_vertical">
+
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2dp"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="请输入车牌号"
+                    android:padding="@dimen/_10dp"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivDeleteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/ic_clear"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_car_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/shape_progress"
+            android:indeterminateDuration="1000"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/time_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_title_panel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/dialogui_datepick_top_left_right_coner">
+
+            <FrameLayout
+                android:id="@+id/fl_first"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@null"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/dialogui_datepick_FontStyleNormalLightBlackMiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="选择日期" />
+
+            <FrameLayout
+                android:id="@+id/fl_next"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@null"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.widget.jcdialog.widget.DateSelectorWheelView
+            android:id="@+id/dwv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/cancle_time_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_login_unselected"
+                android:text="取消"
+                android:textSize="@dimen/normal_font_size" />
+
+            <Button
+                android:id="@+id/ok_time_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_login_selected"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

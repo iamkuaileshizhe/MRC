@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/yxje_jsfs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="结算方式"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/yxje_zqkh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="账期客户"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/yxje_khdj"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        stv:sLeftTextString="账户等级"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/yxje_gssf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        stv:sLeftTextString="公司省份"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_right"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/yhje_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/lv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/oil_type"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="油品种类"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/oil_guobiao"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="市场价格"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/oil_price_tv"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="优惠金额"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/oil_count_et"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="执行价格"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

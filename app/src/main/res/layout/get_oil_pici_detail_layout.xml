@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:text="油品批次详情"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/colorBarText"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/top_bar_ok_ll"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="7dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginTop="7dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="确定"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/colorBarText"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="17sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="invisible" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_title_bar"
+        android:orientation="vertical">
+
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/batch_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/fuel_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/standard_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/desity_oil"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="密度" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@color/divider_line" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/supply_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/supply_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@color/divider_line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.neocom.mobilerefueling.view.OrderConbindView
+                android:id="@+id/batch_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <ImageView
+                android:id="@+id/more_b"
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="@dimen/_10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10dp"
+                android:background="@mipmap/load_more" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider_line" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/custom_progress"
+        android:visibility="gone" />
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/pro_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@android:color/darker_gray"-->
+    <!--android:orientation="vertical"-->
+    <!--&gt;-->
+
+    <!--&lt;!&ndash;<com.neo.mobilerefueling.view.CircleProgress&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/progressbar_down"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="200dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="200dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:antiAlias="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:arcWidth="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:bgArcColor="@android:color/darker_gray"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:bgArcWidth="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:hint="当前进度"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:hintSize="25dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:maxValue="100"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:startAngle="270"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:sweepAngle="360"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:unit="%"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:unitSize="25sp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:value="100"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:valueSize="35sp" />&ndash;&gt;-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/loading_progress"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:indeterminateDrawable="@drawable/custom_progress" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="30dp"-->
+    <!--android:layout_marginLeft="35dp"-->
+    <!--android:layout_marginRight="35dp"-->
+    <!--android:layout_marginTop="26dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/cancle_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_marginRight="25dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_btn_login_selected"-->
+    <!--android:minEms="5"-->
+    <!--android:text="取消"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/ok_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_btn_login_selected"-->
+    <!--android:minEms="5"-->
+    <!--android:visibility="gone"-->
+    <!--android:text="打开"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="19sp" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

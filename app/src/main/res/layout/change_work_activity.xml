@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/top_title_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/top_bar_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:text="交接班记录"
+            android:textColor="@color/colorBarText"
+            android:textColorHint="@color/colorBarText"
+            android:textSize="@dimen/_20sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_14dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="添加交接工单"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/change_work_mic_fg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_navigator_height"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <com.neocom.mobilerefueling.view.HorizontalViewPager
+        android:id="@+id/vp_work_vp_fg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

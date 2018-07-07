@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ty_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:background="@color/white"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_margin="@dimen/_5dp"
+        android:background="@android:color/darker_gray" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/get_oil_time_oc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/get_oil_count_oc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/get_oil_car_no_oc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/get_oil_car_driver_oc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.neocom.mobilerefueling.view.OrderConbindView
+        android:id="@+id/get_oil_car_driver_phone_oc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+</LinearLayout>

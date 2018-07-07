@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/order_no_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp">
+
+            <TextView
+                android:id="@+id/tiyou_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/indicator_color"
+                android:textSize="@dimen/_20sp" />
+
+            <ImageView
+                android:id="@+id/order_arrow"
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/order_no_tv"
+                android:src="@mipmap/ex_close"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tiyou_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/order_state_shape"
+                android:padding="@dimen/_2dp"
+                android:text="已完成"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider" />
+
+
+        <!--<com.neocom.mobilerefueling.view.isEditeTextView-->
+            <!--android:id="@+id/tiyou_time"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--stv:isEdit="false"-->
+            <!--stv:mHint=""-->
+            <!--stv:mTitle="提油时间" />-->
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:layout_width="match_parent"
+            android:id="@+id/tiyou_time"
+            android:layout_height="45dp"/>
+
+        <!--<com.allen.library.SuperTextView-->
+        <!--android:id="@+id/tiyou_time"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:clickable="false"-->
+        <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+        <!--stv:sLeftTextString="提油时间" />-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider" />
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:layout_width="match_parent"
+            android:id="@+id/tiyou_amount_num"
+            android:layout_height="45dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider" />
+        <!--<com.neocom.mobilerefueling.view.isEditeTextView-->
+            <!--android:id="@+id/tiyou_amount_num"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--stv:isEdit="false"-->
+            <!--stv:mHint=""-->
+            <!--stv:mTitle="提取油量" />-->
+
+        <!--<com.allen.library.SuperTextView-->
+        <!--android:id="@+id/tiyou_amount_num"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:clickable="false"-->
+        <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+        <!--stv:sLeftTextString="提取油量" />-->
+
+        <com.neocom.mobilerefueling.view.OrderConbindView
+            android:layout_width="match_parent"
+            android:id="@+id/tiyou_carnum"
+            android:layout_height="45dp"/>
+
+        <!--<com.neocom.mobilerefueling.view.isEditeTextView-->
+            <!--android:id="@+id/tiyou_carnum"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--stv:isEdit="false"-->
+            <!--stv:mHint=""-->
+            <!--stv:mTitle="提油车牌号" />-->
+
+        <!--<com.allen.library.SuperTextView-->
+        <!--android:id="@+id/tiyou_carnum"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:clickable="false"-->
+        <!--stv:sLeftTextSize="@dimen/normal_font_size"-->
+        <!--stv:sLeftTextString="提油车牌号" />-->
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

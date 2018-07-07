@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kehu_type_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+
+
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/kehu_reg_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kehu_comp_addr"
+        stv:mHint="请输入注册资本"
+        stv:mText=""
+        stv:isEdit="true"
+        stv:mTitle="注册资本(万元)" />
+
+    <!--<com.neocom.mobilerefueling.view.isEditeTextView-->
+    <!--android:id="@+id/kehu_reg_date"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/kehu_reg_money"-->
+    <!--stv:mHint="请输入注册日期"-->
+    <!--stv:mText=""-->
+    <!--stv:mTitle="注册日期" />-->
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/kehu_reg_date"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        android:layout_below="@+id/kehu_reg_money"
+        stv:sLeftTextString="注册日期"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_right"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择注册日期" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/kehu_comp_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        android:layout_below="@+id/kehu_reg_money"
+        stv:sLeftTextString="企业类型"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择企业类型" />
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/kehu_busi_scope"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        android:layout_below="@+id/kehu_comp_type"
+        stv:sLeftTextString="经营范围"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择经营范围" />
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/kehu_belong_busi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal_hight"
+        android:layout_below="@+id/kehu_comp_type"
+        stv:sLeftTextString="所属行业"
+        stv:sRightIconHeight="15dp"
+        stv:sRightIconRes="@drawable/arrow_down"
+        stv:sRightIconWidth="15dp"
+        stv:sRightTextString="请选择所属行业" />
+
+    <!--</com.neocom.mobilerefueling.view.ExpandLayout>-->
+
+</LinearLayout>

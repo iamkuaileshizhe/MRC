@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/top_bar_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:text="订单派送单"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/colorBarText"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/top_bar_ok_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/re_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重新调度"
+                android:textColor="@color/color_text_black"
+                android:textSize="17sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_ll"
+        android:layout_below="@+id/top_title_bar"
+        android:layout_marginBottom="@dimen/_1dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/divider_line"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/order_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/order_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/caiyou_leixing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/shouhua_ren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <!--<com.neocom.mobilerefueling.view.OrderConbindView-->
+                <!--android:id="@+id/order_no"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentRight="true">-->
+
+                <!--</com.neocom.mobilerefueling.view.OrderConbindView>-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line" />-->
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/shouhua_ren_shoujihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/peisong_dizhi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/navi_to" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/paidan_ren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/chepaihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/divider_line" />
+
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/paidan_bianhao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/paidan_true_ren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/paidan_dianhua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/jiayou_finish_man"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/jiayou_finish_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <!--<com.neocom.mobilerefueling.view.OrderConbindView-->
+                <!--android:id="@+id/yuji_songda_time"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="visible" />-->
+
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider" />-->
+
+                <!--<com.neocom.mobilerefueling.view.OrderConbindView-->
+                <!--android:id="@+id/user_sure_state"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="gone" />-->
+
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/zong_jiayou_liang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/car_lv_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--android:visibility="gone"-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="加油信息"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/add_budan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_25dp"
+                        android:layout_toLeftOf="@+id/add_car"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@mipmap/added_budan"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="补单"
+                            android:textColor="@color/color_text_black"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/add_car"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@mipmap/add"
+                        android:visibility="visible" />
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/add_car"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:src="@mipmap/add"-->
+                    <!--android:visibility="invisible" />-->
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/divider_line" />
+
+                <com.neocom.mobilerefueling.view.ListViewWithScroll
+                    android:id="@+id/receive_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:divider="@color/divider_line"
+                    android:dividerHeight="3dp">
+
+                </com.neocom.mobilerefueling.view.ListViewWithScroll>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+                <!--<com.neocom.mobilerefueling.view.OrderConbindView-->
+                <!--android:id="@+id/zong_jiayou_liang"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--</com.neocom.mobilerefueling.view.OrderConbindView>-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line" />-->
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/jiayou_feiyong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </com.neocom.mobilerefueling.view.OrderConbindView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:background="@color/divider_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/jiayou_paytype_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <!--gone-->
+                    <!--<com.neocom.mobilerefueling.view.OrderConbindView-->
+                    <!--android:id="@+id/jiayou_paytype"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/_5dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--</com.neocom.mobilerefueling.view.OrderConbindView>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="15dp"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:src="@drawable/arrow_right" />-->
+
+                    <TextView
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_5dp"
+                        android:text="支付方式"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <RadioGroup
+                        android:id="@+id/pay_type_choose"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_online_pay"
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/_5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_background"
+                            android:button="@null"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:text="线上支付"
+                            android:textColor="@drawable/radiobutton_textcolor"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cash_pay"
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/_5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_background"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="现金支付"
+                            android:textColor="@drawable/radiobutton_textcolor"
+                            android:textSize="@dimen/normal_font_size" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/choose_time"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:padding="@dimen/_5dp"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/send_time"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:text="预计送达时间"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/com_content_choose_time"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:text="请选择时间"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+
+
+                <RelativeLayout
+                    android:id="@+id/choose_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5dp"
+                    android:visibility="gone">
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/_1dp"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:background="@color/divider_line" />-->
+
+                    <TextView
+                        android:id="@+id/send_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="预计送达时间"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="@dimen/_20sp" />
+
+                    <TextView
+                        android:id="@+id/com_content_choose_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/more_time"
+                        android:text="请选择时间"
+                        android:textColor="@color/color_text_black"
+                        android:textSize="@dimen/_20sp" />
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/more_time"-->
+                    <!--android:layout_width="17dp"-->
+                    <!--android:layout_height="17dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:src="@mipmap/ex_close" />-->
+
+                    <ImageView
+                        android:id="@+id/more_time"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:src="@mipmap/load_more" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white">
+
+                <EditText
+                    android:id="@+id/note_receive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="备注信息(最多50字)"
+                    android:maxLength="50"
+                    android:minLines="3"
+                    android:textColor="@color/color_text_black" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/bottom_ll_yes_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!--android:visibility="gone"-->
+
+            <Button
+                android:id="@+id/disagree_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/order_no_btn"
+                android:text="拒接订单" />
+
+            <Button
+                android:id="@+id/agree_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/order_ok_btn"
+                android:text="接受订单"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/price_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/oil_all_amount_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="油量:"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="@dimen/big_font_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/oil_all_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="@dimen/big_font_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/all_price_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="¥ 0"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="@dimen/big_font_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/order_ok_btn"
+                android:padding="5dp"
+                android:text="加油完成"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <!--yidaochagLl-->
+
+        <LinearLayout
+            android:id="@+id/yidaochag_ll"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/charge_money_select_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="确认已到场"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+
+
+        </LinearLayout>
+
+
+        <!--<Button-->
+        <!--android:id="@+id/pay_now"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:visibility="gone"-->
+        <!--android:text="加油完成" />-->
+    </LinearLayout>
+
+</RelativeLayout>

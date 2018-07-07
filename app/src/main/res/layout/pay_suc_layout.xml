@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/et_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_270dp"
+        android:layout_height="360dp"
+        android:layout_below="@+id/top_title_bar"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:src="@mipmap/pay_suc" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30dp"
+            android:text="支 付 成 功"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detail_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:textColor="#636363"
+                android:textSize="@dimen/normal_font_size" />
+            <!--android:text="成功支付50元"-->
+            <!--<ImageView-->
+            <!--android:layout_width="@dimen/_10dp"-->
+            <!--android:layout_height="@dimen/_10dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_2dp"-->
+            <!--android:layout_toRightOf="@+id/detail_txt"-->
+            <!--android:src="@mipmap/look_detail" />-->
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="@dimen/_50dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="@dimen/_0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal">-->
+
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/pay_suc_border_shape"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_5dp"
+                android:paddingLeft="@dimen/_10dp"
+                android:paddingRight="@dimen/_10dp"
+                android:paddingTop="@dimen/_5dp"
+                android:text="完成"
+                android:textSize="@dimen/normal_font_size" />
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="@dimen/_0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/go_to_buy"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/border_shape"-->
+            <!--android:paddingBottom="@dimen/_5dp"-->
+            <!--android:paddingLeft="@dimen/_10dp"-->
+            <!--android:paddingRight="@dimen/_10dp"-->
+            <!--android:paddingTop="@dimen/_5dp"-->
+            <!--android:text="继续下单"-->
+            <!--android:textSize="@dimen/normal_font_size" />-->
+
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

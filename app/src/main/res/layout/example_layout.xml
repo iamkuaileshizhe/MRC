@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <!--<com.neo.mobilerefueling.view.XListView-->
+    <!--android:id="@+id/listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--</com.neo.mobilerefueling.view.XListView>-->
+
+    <Button
+        android:id="@+id/ex_btn_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支付宝集成测试" />
+
+    <Button
+        android:id="@+id/ex_btn_wx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="微信集成测试" />
+
+    <Button
+        android:id="@+id/ex_btn_baidu_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="百度地图集成测试" />
+
+    <Button
+        android:id="@+id/ex_btn_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="流程图测试" />
+
+    <Button
+        android:id="@+id/ex_btn_orderinfi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="订单详情" />
+
+    <Button
+        android:id="@+id/ex_btn_gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手势" />
+
+    <Button
+        android:id="@+id/ex_btn_open_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开 pdf" />
+
+    <Button
+        android:id="@+id/ex_btn_order_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="订单完成" />
+
+
+    <Button
+        android:id="@+id/ex_btn_get_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取油价" />
+    <Button
+        android:id="@+id/bd_loc_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取当前位置" />
+
+    <Button
+        android:id="@+id/bd_loc_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="导航测试" />
+
+
+</LinearLayout>

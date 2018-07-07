@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/multi_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_item_height"
+        app:sCenterBottomTextSize="@dimen/normal_font_size"
+        app:sCenterTextColor="@color/color_text_black"
+        app:sCenterTextString="请选择"
+        app:sLeftIconHeight="@dimen/_20dp"
+        app:sLeftIconRes="@mipmap/ic_close"
+        app:sLeftIconWidth="@dimen/_20dp"
+        app:sRightTextString="确定" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/multi_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/multi_title" />
+
+
+    <LinearLayout
+        android:id="@+id/ok_go_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/multi_list"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!--        android:background="@drawable/agree_btn_select"
+        -->
+
+
+        <Button
+            android:id="@+id/multi_ok_btn"
+            style="@style/Font15_white"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/agree_btn_select"
+            android:text="确认支付" />
+
+        <Button
+            android:id="@+id/multi_cancle_btn"
+            style="@style/Font15_white"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/agree_btn_select"
+            android:text="取消" />
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/agree_btn"-->
+    <!--style="@style/Font15_white"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/normal_item_height"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_margin="@dimen/_5dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="@drawable/agree_btn_select"-->
+    <!--android:text="同意" />-->
+
+
+</RelativeLayout>

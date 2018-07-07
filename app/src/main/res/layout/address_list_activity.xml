@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.neocom.mobilerefueling.view.TopTitleBar
+        android:id="@+id/address_list_top"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        app:middleTitle="选择地址"
+        app:rightTitle="确定" />
+
+    <ListView
+        android:id="@+id/address_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_address_ll"
+        android:layout_below="@id/address_list_top"
+        android:dividerHeight="@dimen/_5dp"
+        android:scrollbars="none" />
+
+
+    <LinearLayout
+        android:id="@+id/add_address_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/add_address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="添加地址"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

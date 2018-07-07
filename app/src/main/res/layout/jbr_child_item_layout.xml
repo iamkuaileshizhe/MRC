@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.neocom.mobilerefueling.view.isEditeTextView
+        android:id="@+id/child_menu_text"
+        android:layout_width="match_parent"
+        app:mHint="请输入"
+        android:layout_height="wrap_content" />
+
+
+    <!--app:isEdit="false"-->
+    <!--app:mHint="这个不可编辑"-->
+    <!--app:mText="不可编辑"-->
+    <!--app:mTitle="不可编辑"-->
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_view_enter_edit"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:gravity="center_horizontal"
+        android:text="请输入重新调度原因:"
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/normal_font_size" />
+
+
+    <RelativeLayout
+        android:id="@+id/other_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/et_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/note_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入重新调度信息，最多100字"
+            android:maxLength="100"
+            android:minLines="3"
+            android:textColor="@color/color_text_black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/normal_font_size" />
+
+
+        <TextView
+            android:id="@+id/remain_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/note_info"
+            android:paddingBottom="@dimen/_5dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/grey_a5a5a5"
+            android:textSize="@dimen/small_font_size" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_neg"
+            android:layout_width="0dp"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_enter_edit_right_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <View
+            android:layout_width="0.7dip"
+            android:layout_height="50dip"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/btn_pos"
+            android:layout_width="0dp"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_view_enter_edit_left_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/normal_font_size" />
+    </LinearLayout>
+
+</LinearLayout>

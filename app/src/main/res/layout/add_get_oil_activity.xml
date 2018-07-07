@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_line"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:text="添加补给单"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/colorBarText"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/top_bar_ok_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textColor="@color/colorBarText"
+                android:textSize="17sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_ll"
+        android:layout_below="@+id/top_title_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/supply_car_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <com.neocom.mobilerefueling.view.isEditeTextView
+                    android:id="@+id/supply_car_code_istv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:isEdit="false"
+                    app:mTitle="补给车牌号" />
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/supply_car_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/supply_car_telphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/add_car_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <!--<com.neocom.mobilerefueling.view.OrderEdittext-->
+                    <!--android:id="@+id/move_car_code"-->
+                    <!--android:layout_width="@dimen/_0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1" />-->
+
+                    <com.neocom.mobilerefueling.view.isEditeTextView
+                        android:id="@+id/move_car_code_istv"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:isEdit="false"
+                        app:mHint="请选择车牌号"
+                        app:mTitle="加油车牌号" />
+
+                    <ImageView
+                        android:id="@+id/add_car"
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:src="@mipmap/add" />
+
+                </LinearLayout>
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/move_car_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/move_car_telphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+                <!--<com.neocom.mobilerefueling.view.OrderEdittext-->
+                <!--android:id="@+id/surplus_oil"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.neocom.mobilerefueling.view.OrderEdittext
+                        android:id="@+id/surplus_num"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/surplus_num_danwei"
+                        style="@style/Font13_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吨" />
+
+                </LinearLayout>
+
+
+                <com.neocom.mobilerefueling.view.OrderEdittext
+                    android:id="@+id/surplus_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!--<com.neocom.mobilerefueling.view.OrderEdittext-->
+                    <!--android:id="@+id/surplus_time"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="3dp">
+
+                        <TextView
+                            style="@style/Font13_black"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:text="补给时间" />
+
+                        <TextView
+                            android:id="@+id/surplus_time"
+                            style="@style/Font13_black"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择时间"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/ex_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/oil_pici"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/more" />
+
+                <ImageView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/load_more" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@android:color/white">
+
+                <EditText
+                    android:id="@+id/remark_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请填写备注(45字以内)"
+                    android:maxLength="200"
+                    android:minLines="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_20sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+
+
+        <Button
+            android:id="@+id/submit_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/charge_money_select_bg"
+            android:text="到场确认"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submit_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/charge_money_select_bg"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

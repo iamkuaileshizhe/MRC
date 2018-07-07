@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_container"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/oil_car_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:padding="@dimen/_8dp"
+        android:text="京H12345"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/normal_font_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginRight="@dimen/_5dp"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/oil_car_username"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:textColor="@color/btn_alert"
+            android:textSize="@dimen/normal_font_size" />
+
+        <TextView
+            android:id="@+id/oil_car_userphone"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2dp"
+            android:layout_weight="1"
+            android:padding="@dimen/_5dp"
+            android:textColor="@color/btn_alert"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider_line"
+        android:layout_height="@dimen/_2dp"/>
+
+</LinearLayout>

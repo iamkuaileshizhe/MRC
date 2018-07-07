@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Font13_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="审批意见"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5dp"
+        android:background="@color/divider"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+        <!--
+                android:layout_marginTop="@dimen/_5dp"
+
+        -->
+
+        <!--android:background="@drawable/et_bg"-->
+
+
+        <EditText
+            android:id="@+id/note_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:maxLength="50"
+            android:minLines="3"
+            android:textColor="@color/color_text_black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/normal_font_size" />
+
+        <!--            android:hint="请输入审批意见，最多50字"
+-->
+
+        <TextView
+            android:id="@+id/remain_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/note_info"
+            android:paddingBottom="@dimen/_5dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/grey_a5a5a5"
+            android:textSize="@dimen/small_font_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_sign_info_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone"-->
+    <!--app:mText="签名"-->
+    <!--app:mTitle="签名"-->
+    <!--app:showLine="false" />-->
+
+    <!--<com.huanyu.product.ui.view.isEditeTextView-->
+    <!--android:id="@+id/sp_sign_time_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone"-->
+    <!--app:mText="2018-4-23 09:49:13"-->
+    <!--app:mTitle="时间"-->
+    <!--app:showLine="false" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5dp"
+        android:background="@color/divider" />
+</LinearLayout>

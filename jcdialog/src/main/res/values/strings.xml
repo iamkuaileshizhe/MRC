@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">JcDialog</string>
+    <!--时间选择器相关-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <!--下拉刷新相关-->
+    <string name="listview_header_hint_normal">下拉刷新</string>
+    <string name="listview_header_hint_release">释放立即刷新</string>
+    <string name="listview_loading">正在加载</string>
+    <string name="nomore_loading">没有了</string>
+    <string name="refreshing">正在刷新</string>
+    <string name="refresh_done">刷新完成</string>
+    <string name="listview_header_last_time">上次更新时间：</string>
+
+    <!--内嵌等待框相关-->
+    <string name="loading_tip_net_error">网络访问错误，请稍后再试</string>
+    <string name="loading_tip_empty">还没有数据哦</string>
+    <string name="loading_tip_loading">请稍后...</string>
+    <string name="loading_tip_reload">重新尝试</string>
+    <string name="loading_tip_no_net">网络不可用,请检查你的网络</string>
+
+    <string name="large_intro">
+
+        北京哥们加油网络科技有限公司是集油品销售与运输为一体，率先在国内提供移动式现场加油的服务商。\n\n
+
+        哥们加油致力于打造以用户为中心的移动电商加油平台，构建以安全环保为重点的一体化智能安全管控系统，从而推动油品终端市场健康有序发展。哥们加油秉承“及时便捷、质优价廉、安全环保”的经营理念，急用户之需，解政府之难，整合油品终端资源，建立标准化安全运营体系和质量服务保障体系。直接面向终端消费者，服务于全国各行业，为用户提供高品质、低价格的油品和增值服务。\n\n
+
+        北京哥们加油网络科技有限公司是集油品销售与运输为一体，率先在国内提供移动式现场加油的服务商。
+哥们加油致力于打造以用户为中心的移动电商加油平台，构建以安全环保为重点的一体化智能安全管控系统，从而推动油品终端市场健康有序发展。哥们加油秉承“及时便捷、质优价廉、安全环保”的经营理念，急用户之需，解政府之难，整合油品终端资源，建立标准化安全运营体系和质量服务保障体系。直接面向终端消费者，服务于全国各行业，为用户提供高品质、低价格的油品和增值服务。
+哥们加油将践行用心加油、放心油品、舒心体验的服务宗旨，用新服务传递价值，用心服务彰显责任，以坚守责任，坚持品质为使命，努力成为负责任、有创新、受尊重的优秀企业，为用户更加便捷、市场更加有序、天空更加湛蓝、安全更有保障贡献我们的力量！\n\n
+    </string>
+
+</resources>

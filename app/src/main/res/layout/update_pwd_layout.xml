@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/top_title_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/abc_action_bar_default_height_material"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/top_bar_finish_ll"-->
+    <!--android:layout_width="@dimen/_20dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@mipmap/back_top" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center_horizontal">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/top_bar_title_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@null"-->
+    <!--android:cursorVisible="false"-->
+    <!--android:text="修改密码"-->
+    <!--android:textColor="@color/colorBarText"-->
+    <!--android:textColorHint="@color/colorBarText"-->
+    <!--android:textSize="@dimen/_20sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/top_bar_ok_ll"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="7dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/addmore"-->
+    <!--android:visibility="invisible" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="确定"-->
+    <!--android:textColor="@color/colorBarText"-->
+    <!--android:textSize="17sp"-->
+    <!--android:visibility="invisible" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/top_bar_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/top_bar_finish_ll"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_10dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/back_top" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/top_bar_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:text="修改密码"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorBarText"
+                    android:textSize="@dimen/_20sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/top_bar_ok_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确定"
+                    android:textColor="@color/colorBarText"
+                    android:textSize="17sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="旧密码"
+            android:textColor="@color/color_text_black" />
+
+        <EditText
+            android:id="@+id/old_pwd_et"
+            style="@style/Font13_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="请输入旧密码"
+            android:inputType="textWebPassword"
+            android:maxLength="12"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            style="@style/Font13_black"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="新密码"
+            android:textColor="@color/color_text_black" />
+
+        <EditText
+            android:id="@+id/new_pwd"
+            style="@style/Font13_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="输入新密码"
+            android:inputType="textWebPassword"
+            android:maxLength="12"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            style="@style/Font13_black"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="确认密码"
+            android:textColor="@color/color_text_black" />
+
+        <EditText
+            android:id="@+id/et_forget_comfirm"
+            style="@style/Font13_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="请再次输入密码"
+            android:inputType="textWebPassword"
+            android:maxLength="12"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/id_confirm_bt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/_5dp"
+            android:background="@drawable/bg_btn_login_selected"
+            android:text="确定修改密码"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_font_size" />
+
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/id_confirm_bt"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="44dp"-->
+    <!--android:text="确定"-->
+    <!--android:textSize="15sp"-->
+    <!--android:textColor="#fff"-->
+    <!--android:background="@drawable/button_selector"-->
+    <!--/>-->
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55D4D5D7"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/indicator_driver_mic_fg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_navigator_height"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <com.neocom.mobilerefueling.view.HorizontalViewPager
+        android:id="@+id/vp_worksign_driver_vp_fg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!--<ListView-->
+        <!--android:id="@+id/worksign_fg_lv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></ListView>-->
+
+
+</LinearLayout>

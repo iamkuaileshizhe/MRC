@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_line"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/top_bar_finish_ll"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/back_top" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/top_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:text="交接班工单"
+                android:textColor="@color/top_bar_font_color"
+                android:textColorHint="@color/colorBarText"
+                android:textSize="@dimen/_20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/top_bar_ok_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/addmore"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textColor="@color/colorBarText"
+                android:textSize="17sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_ll_sub_oil"
+        android:layout_below="@+id/top_title_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/shit_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.neocom.mobilerefueling.view.OrderConbindView
+                    android:id="@+id/carry_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line"></View>
+
+                <RelativeLayout
+                    android:id="@+id/turn_user_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical">
+
+                    <com.neocom.mobilerefueling.view.OrderConbindView
+                        android:id="@+id/turn_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/more" />
+
+                    <ImageView
+                        android:id="@+id/more"
+                        android:layout_width="10dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:background="@mipmap/load_more" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_40dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="交班时间"
+                        android:textColor="@color/color_text_black" />
+
+
+                    <TextView
+                        android:id="@+id/com_edit_content"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="交班时间"
+                        android:padding="5dp"
+                        android:textColor="@color/color_text_black"
+                        android:textCursorDrawable="@null" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/btn_cx_cph"-->
+                    <!--style="@style/Font13_red"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/rec_stroke_red"-->
+                    <!--android:gravity="center"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:text="查询车牌" />-->
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:src="@mipmap/ex_close"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/choose_time"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/com_edit_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/com_edit_content"-->
+                <!--android:text="交班时间"-->
+                <!--android:textColor="@color/g"-->
+                <!--android:textSize="@dimen/normal_font_size" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/com_edit_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:text="请选择交班时间>>"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/normal_font_size" />-->
+
+                <!--</RelativeLayout>-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+
+                <LinearLayout
+                    android:id="@+id/adddress_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:minHeight="45dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="交班地点:" />
+
+
+                    <TextView
+                        android:id="@+id/shit_address_content"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="交班地点"
+                        android:padding="5dp"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/shit_address_titile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/shit_address_content"-->
+                <!--android:text="交班地点"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/shit_address_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:text="交班地点>>"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_1dp"-->
+                <!--android:background="@color/divider_line"/>-->
+
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/jiaojie_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_normal_hight"
+                    stv:sLeftTextString="岗位类型"
+                    stv:sRightIconHeight="15dp"
+                    stv:sRightIconRes="@drawable/arrow_down"
+                    stv:sRightIconWidth="15dp"
+                    stv:sRightTextString="请选择" />
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/shit_car_no_titile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/shit_car_no"-->
+                <!--android:text="车牌号"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/shit_car_no"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:background="@drawable/et_bg"-->
+                <!--android:hint="请输入车牌号"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/car_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/choose_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="车牌号"
+                        android:textColor="@color/color_text_black" />
+
+
+                    <TextView
+                        android:id="@+id/shit_car_no"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入车牌号"
+                        android:padding="5dp"
+                        android:textColor="@color/color_text_black"
+                        android:textCursorDrawable="@null" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_40dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="车辆里程(km)"
+                        android:textColor="@color/color_text_black" />
+
+
+                    <EditText
+                        android:id="@+id/car_mile"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入车辆里程"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textCursorDrawable="@null" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_40dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="油罐剩余油量(吨)"
+                        android:textColor="@color/color_text_black" />
+
+
+                    <TextView
+                        android:id="@+id/remain_car_oil"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="剩余油量"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textCursorDrawable="@null" />
+
+                </LinearLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/remain_car_oil_titile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/remain_car_oil"-->
+                <!--android:text="车辆剩余油量(L)"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/remain_car_oil"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:background="@drawable/et_bg"-->
+                <!--android:hint="请输入剩余油量"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="@dimen/_1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/car_mile_titile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/car_mile"-->
+                <!--android:text="车辆里程(km)"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/car_mile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:background="@drawable/et_bg"-->
+                <!--android:hint="请输入车辆里程"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="@dimen/_1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/divider_line"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_40dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/Font13_black"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="油罐剩余油量(吨)"
+                        android:textColor="@color/color_text_black" />
+
+
+                    <EditText
+                        android:id="@+id/shit_car_remain"
+                        style="@style/Font13_black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:cursorVisible="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入剩余油量"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textCursorDrawable="@null" />
+
+                </LinearLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:padding="@dimen/_5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/shit_car_address_titile"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@+id/shit_car_address"-->
+                <!--android:text="油罐剩余油量(L)"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/shit_car_address"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:background="@drawable/et_bg"-->
+                <!--android:hint="请输入剩余油量"-->
+                <!--android:inputType="number"-->
+                <!--android:padding="@dimen/_1dp"-->
+                <!--android:paddingLeft="@dimen/_5dp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/_20sp" />-->
+
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/shift_remark_info_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@android:color/white">
+
+                <EditText
+                    android:id="@+id/shift_remark_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请填写备注(45字以内)"
+                    android:minLines="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll_sub_oil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+
+        <Button
+            android:id="@+id/submit_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#B1B1B1"
+            android:text="到场确认"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submit_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_login_selected"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/normal_font_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:orientation="vertical">
+    <!--#55D4D5D7-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/price_all"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/me_top_bg"
+                android:padding="@dimen/_10dp">
+
+
+                <com.neocom.mobilerefueling.view.CircleImageAvtar
+                    android:id="@+id/me_fg_user_avatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:src="@mipmap/app_mine_photoman" />
+
+                <LinearLayout
+                    android:id="@+id/avtar_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/me_fg_user_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/me_fg_comp_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/normal_font_size" />
+                    <TextView
+                        android:id="@+id/me_fg_nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <TextView
+                        android:id="@+id/me_fg_sinature_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/normal_font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/holo_red_dark"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_20dp"
+                    android:paddingTop="@dimen/_20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="总资产(元)"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:layout_centerHorizontal="true"
+                            android:text="93.86"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="@dimen/_1dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/bg_white" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_middle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="冻结资产(元)"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title_middle"
+                            android:layout_centerHorizontal="true"
+                            android:text="20.6"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/bg_white" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="可用资产(元)"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20.6"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@android:color/white"-->
+            <!--android:orientation="horizontal">-->
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="@dimen/_0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="@dimen/_10dp">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/pay_more"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/pay_more" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_10dp"-->
+            <!--android:layout_toRightOf="@+id/pay_more"-->
+            <!--android:text="立即充值" />-->
+
+            <!--</RelativeLayout>-->
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="@dimen/_0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="@dimen/_10dp">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/draw_money"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/draw_money" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/_10dp"-->
+            <!--android:layout_toRightOf="@+id/draw_money"-->
+            <!--android:text="快速提现" />-->
+
+            <!--</RelativeLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+
+            <!--<com.neocom.mobilerefueling.view.ListViewWithScroll-->
+            <!--android:id="@+id/me_fg_menu_lv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:divider="@android:color/darker_gray"-->
+            <!--android:dividerHeight="1dp" />-->
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/user_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="个人信息"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_right"
+                stv:sRightIconWidth="15dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/upd_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextString="修改密码"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_right"
+                stv:sRightIconWidth="15dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/tts_speach"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                stv:sDividerLineType="both"
+                stv:sLeftTextString="语音播报"
+                stv:sRightViewType="switchBtn"
+                stv:sSwitchIsChecked="true"
+                stv:sThumbResource="@drawable/thumb"
+                stv:sTrackResource="@drawable/track" />
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/about_us"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="2dp"
+                stv:sLeftTextString="关于我们"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_right"
+                stv:sRightIconWidth="15dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/version_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                stv:sLeftTextString="版本号"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_right"
+                stv:sRightIconWidth="15dp" />
+            <!--stv:sRightTextString="1.0.1"-->
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/qianzai_kehu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                stv:sLeftTextString="潜在客户"
+                stv:sRightIconHeight="15dp"
+                stv:sRightIconRes="@drawable/arrow_right"
+                stv:sRightIconWidth="15dp" />
+
+
+            <Button
+                android:id="@+id/me_fg_exit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_login_selected"
+                android:text="退出登录"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_font_size" />
+
+            <!--<Button-->
+            <!--android:id="@+id/me_fg_exit_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@android:color/darker_gray"-->
+            <!--android:text="退出登录"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="@dimen/normal_font_size" />-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
